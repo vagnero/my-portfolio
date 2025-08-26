@@ -1,0 +1,46 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Layout para o footer fixo */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* ocupa todo espaço restante entre header e footer */
+}
+
+/* Temas */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-footer-bg: #343a40;
+  --header-footer-text: #ffffff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-footer-bg: #1f1f1f;
+  --header-footer-text: #ffffff;
+}
+
+/* Aplicando variáveis */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header, footer {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+}
+
+a {
+  color: var(--text-color);
+}
