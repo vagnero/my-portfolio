@@ -1,30 +1,30 @@
 import { Link } from "react-router-dom";
 import { Container, Navbar, NavbarBrand, Nav, NavItem } from "reactstrap";
 import { FaSun, FaMoon } from "react-icons/fa";
-
+import type { i18n, TFunction } from "i18next";
 interface HeaderProps {
   toggleTheme: () => void;
   darkMode: boolean;
+  t: TFunction;
+  i18n: i18n;
+  toggleLanguage: () => void;
 }
 
-export default function Header({ toggleTheme, darkMode }: HeaderProps) {
+const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps) => {
+
+
+
   return (
 <Navbar color={darkMode ? "dark" : "light"} dark={darkMode} expand="md">
   <Container className="d-flex justify-content-between align-items-center">
 
     {/* Lado esquerdo: Brand + NavItems */}
     <div className="d-flex align-items-center">
-      <NavbarBrand tag={Link} to="/">My Portfolio</NavbarBrand>
-      <Nav navbar className="ms-3 d-flex align-items-center">
-        <NavItem>
-          <Link className="nav-link" to="/about">Sobre</Link>
-        </NavItem>
-        <NavItem>
-          <Link className="nav-link" to="/projects">Projetos</Link>
-        </NavItem>
-        <NavItem>
-          <Link className="nav-link" to="/contact">Contato</Link>
-        </NavItem>
+          <NavbarBrand tag={Link} to="/">{t("brand")}</NavbarBrand>
+          <Nav navbar className="ms-3 d-flex align-items-center">
+            <NavItem><Link className="nav-link" to="/about">{t("about")}</Link></NavItem>
+            <NavItem><Link className="nav-link" to="/projects">{t("projects")}</Link></NavItem>
+            <NavItem><Link className="nav-link" to="/contact">{t("contact")}</Link></NavItem>
       </Nav>
     </div>
 
@@ -39,6 +39,9 @@ export default function Header({ toggleTheme, darkMode }: HeaderProps) {
     </div>
   </span>
 </label>
+          <button className="btn btn-outline-primary" onClick={toggleLanguage}>
+          {i18n.language === "en" ? "PT" : "EN"}
+        </button>
     </div>
 
   </Container>
@@ -46,3 +49,5 @@ export default function Header({ toggleTheme, darkMode }: HeaderProps) {
 
   );
 }
+
+export default Header;
