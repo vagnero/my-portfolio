@@ -1,6 +1,6 @@
 import { Button } from "reactstrap";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="text-center">
       <h1>Bem-vindo ao meu Portfólio 👋</h1>
@@ -9,3 +9,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

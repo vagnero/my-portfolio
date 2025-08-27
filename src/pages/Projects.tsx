@@ -1,4 +1,4 @@
-export default function Projects() {
+const Projects = () => {
   return (
     <div>
       <h1>Meus Projetos</h1>
@@ -10,3 +10,5 @@ export default function Projects() {
     </div>
   );
 }
+
+export default Projects;
