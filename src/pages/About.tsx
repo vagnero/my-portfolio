@@ -1,4 +1,11 @@
-const About = () => {
+import useDocumentTitle from "../hooks/useDocumentTitle";
+
+interface PageProps {
+pageName: string;
+}
+
+const About: React.FC<PageProps> = ({ pageName }) => {
+  useDocumentTitle(pageName, "Default");
   return (
     <div>
       <h1>Sobre mim</h1>

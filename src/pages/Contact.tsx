@@ -1,4 +1,12 @@
-const Contact = () => {
+import useDocumentTitle from "../hooks/useDocumentTitle";
+
+interface PageProps {
+  pageName: string;
+}
+
+const Contact: React.FC<PageProps> = ({ pageName }) => {
+  useDocumentTitle(pageName, "Default");
+
   return (
     <div>
       <h1>Contato</h1>

@@ -5,23 +5,37 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { useAlterMode } from "./hooks/useAlterMode";
-import useAlterLanguage from "./hooks/useAlterLanguage";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLanguage } from "./store/slices/languageSlice";
+import { toggleTheme } from "./store/slices/themeSlice";
+import type { RootState } from "./store";
+import React from "react";
 function App() {
-  const { darkMode, toggleTheme } = useAlterMode();
-  const { toggleLanguage } = useAlterLanguage();
+  const dispatch = useDispatch();
+  
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
+  const language = useSelector((state: RootState) => state.language.language);
   const { t, i18n } = useTranslation();
 
-
+  React.useEffect(() => {
+    i18n.changeLanguage(language);
+    document.body.classList.toggle("dark", darkMode);
+  }, [language, i18n, darkMode]);
   return (
     <HashRouter>
-      <Header toggleTheme={toggleTheme} darkMode={darkMode} t={t} i18n={i18n} toggleLanguage={toggleLanguage} />
+            <Header
+        toggleTheme={() => dispatch(toggleTheme())}
+        darkMode={darkMode}
+        t={t}
+        i18n={i18n}
+        toggleLanguage={() => dispatch(toggleLanguage())}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home pageName={t("home")} />} />
+        <Route path="/about" element={<About pageName={t("about")} />} />
+        <Route path="/projects" element={<Projects pageName={t("projects")} />} />
+        <Route path="/contact" element={<Contact pageName={t("contact")} />} />
       </Routes>
       <Footer darkMode={darkMode} />
 

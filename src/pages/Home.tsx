@@ -1,6 +1,11 @@
 import { Button } from "reactstrap";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
-const Home = () => {
+interface PageProps {
+  pageName: string;
+}
+const Home: React.FC<PageProps> = ({ pageName }) => {
+  useDocumentTitle(pageName, "My Portfolio");
   return (
     <div className="text-center">
       <h1>Bem-vindo ao meu Portfólio 👋</h1>
