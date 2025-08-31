@@ -39,7 +39,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
     </div>
   </span>
 </label>
-          <button className="btn btn-outline-primary" onClick={toggleLanguage}>
+          <button className="btn btn-outline-primary ms-3" onClick={toggleLanguage}>
           {i18n.language === "en" ? "PT" : "EN"}
         </button>
     </div>
