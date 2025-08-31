@@ -3,5 +3,6 @@
   "brand": "Meu Portfólio",
   "about": "Sobre",
   "projects": "Projetos",
-  "contact": "Contato"
+  "contact": "Contato",
+  "footerText": "Meu Portfólio | Desenvolvido em React"
 }

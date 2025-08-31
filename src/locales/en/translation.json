@@ -3,5 +3,6 @@
   "brand": "My Portfolio",
   "about": "About",
   "projects": "Projects",
-  "contact": "Contact"
+  "contact": "Contact",
+  "footerText": "My Portfolio | Built with React"
 }
