@@ -12,6 +12,7 @@ import { toggleTheme } from "./store/slices/themeSlice";
 import type { RootState } from "./store";
 import React from "react";
 import { PageWrapper } from "./components/PageWrapper";
+import College from "./pages/College";
 function App() {
   const dispatch = useDispatch();
   
@@ -32,18 +33,22 @@ function App() {
         i18n={i18n}
         toggleLanguage={() => dispatch(toggleLanguage())}
       />
-      <PageWrapper language={language}>
-
+     
+  <main>
+    <PageWrapper language={language}>
       <Routes>
         <Route path="/" element={<Home pageName={t("home")} />} />
         <Route path="/about" element={<About pageName={t("about")} />} />
         <Route path="/projects" element={<Projects pageName={t("projects")} />} />
         <Route path="/contact" element={<Contact pageName={t("contact")} />} />
+        <Route path="/college" element={<College pageName={t("college")} />} />
       </Routes>
-      </PageWrapper>
-      <Footer darkMode={darkMode} t={t} i18n={i18n} />
+    </PageWrapper>
+  </main>
 
-    </HashRouter>
+    <Footer darkMode={darkMode} t={t} i18n={i18n} />
+
+  </HashRouter>
   );
 }
 

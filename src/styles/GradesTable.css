@@ -1,0 +1,60 @@
+/* Container da tabela */
+.grades-table-container {
+  overflow-x: auto;
+  margin-top: 24px;
+}
+
+/* Tabela */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Cabeçalho */
+.grades-table thead {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+}
+
+.grades-table thead th {
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Linhas */
+.grades-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.grades-table tbody td {
+  padding: 8px 12px;
+  color: var(--text-color);
+}
+
+/* Linhas alternadas para melhor visual */
+.grades-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+body.dark .grades-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Média */
+.grades-table tfoot tr {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+body.dark .grades-table tfoot tr {
+  background-color: #1f1f1f;
+}
+
+.grades-table tfoot td {
+  padding: 8px 12px;
+}

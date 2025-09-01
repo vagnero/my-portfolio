@@ -33,6 +33,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
           <Nav navbar className="ms-auto d-flex align-items-center">
             <NavItem><Link className="nav-link" to="/about">{t("about")}</Link></NavItem>
             <NavItem><Link className="nav-link" to="/projects">{t("projects")}</Link></NavItem>
+            <NavItem><Link className="nav-link" to="/college">{t("college")}</Link></NavItem>
             <NavItem><Link className="nav-link" to="/contact">{t("contact")}</Link></NavItem>
 
             {/* Switch de tema + botão de linguagem */}

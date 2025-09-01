@@ -12,7 +12,9 @@ body, html, #root {
 }
 
 main {
-  flex: 1; /* ocupa todo espaço restante entre header e footer */
+  flex: 1; /* ocupa todo o espaço restante */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Temas */

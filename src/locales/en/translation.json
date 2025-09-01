@@ -3,6 +3,7 @@
   "brand": "My Portfolio",
   "about": "About",
   "projects": "Projects",
+  "college": "College",
   "contact": "Contact",
   "footerText": "My Portfolio | Built with React"
 }
