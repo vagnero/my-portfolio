@@ -1,10 +1,4 @@
-import { useMemo } from "react";
-import {
-  createColumnHelper,
-  useReactTable,
-  getCoreRowModel,
-  flexRender,
-} from "@tanstack/react-table";
+import { Table } from "reactstrap";
 
 interface Grade {
   Semestre: number;
@@ -17,29 +11,10 @@ interface Grade {
 
 interface GradesTableProps {
   data: Grade[];
+  darkMode: boolean;
 }
 
-const GradesTable = ({ data }: GradesTableProps) => {
-  const columnHelper = createColumnHelper<Grade>();
-
-  const columns = useMemo(
-    () => [
-      columnHelper.accessor("Semestre", { header: "Semestre" }),
-      columnHelper.accessor("Ano", { header: "Ano" }),
-      columnHelper.accessor("Disciplina", { header: "Disciplina" }),
-      columnHelper.accessor("Nota", { header: "Nota" }),
-      columnHelper.accessor("CargaHoraria", { header: "Carga Horária" }),
-      columnHelper.accessor("Situacao", { header: "Situação" }),
-    ],
-    []
-  );
-
-  const table = useReactTable({
-    data,
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-  });
-
+const GradesTable = ({ data, darkMode }: GradesTableProps ) => {
   // Média ponderada geral
   const totalWeighted = data.reduce(
     (acc, cur) => acc + cur.Nota * cur.CargaHoraria,
@@ -50,26 +25,26 @@ const GradesTable = ({ data }: GradesTableProps) => {
 
   return (
     <div className="grades-table-container">
-      <table className="grades-table">
+      <Table bordered striped hover responsive color={darkMode ? "dark" : "light"} dark={darkMode}>
         <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <th key={header.id}>
-                  {flexRender(header.column.columnDef.header, header.getContext())}
-                </th>
-              ))}
-            </tr>
-          ))}
+          <tr>
+            <th>Semestre</th>
+            <th>Ano</th>
+            <th>Disciplina</th>
+            <th>Nota</th>
+            <th>Carga Horária</th>
+            <th>Situação</th>
+          </tr>
         </thead>
         <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
+          {data.map((grade, idx) => (
+            <tr key={idx}>
+              <td>{grade.Semestre}</td>
+              <td>{grade.Ano}</td>
+              <td>{grade.Disciplina}</td>
+              <td>{grade.Nota}</td>
+              <td>{grade.CargaHoraria}</td>
+              <td>{grade.Situacao}</td>
             </tr>
           ))}
         </tbody>
@@ -80,9 +55,9 @@ const GradesTable = ({ data }: GradesTableProps) => {
             <td colSpan={2}></td>
           </tr>
         </tfoot>
-      </table>
+      </Table>
     </div>
   );
-}
+};
 
 export default GradesTable;

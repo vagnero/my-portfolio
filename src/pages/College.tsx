@@ -15,9 +15,10 @@ interface Grade {
 
 interface PageProps {
   pageName: string;
+  darkMode: boolean;
 }
 
-const College = ({ pageName }: PageProps) => {
+const College = ({ pageName, darkMode }: PageProps) => {
   useDocumentTitle(pageName, "Default");
   const [gradesData, setGradesData] = useState<Grade[]>([]);
 
@@ -40,7 +41,7 @@ const College = ({ pageName }: PageProps) => {
       <CollegeHeader images={images} title={pageName} />
 
       {/* Tabela de notas */}
-      <GradesTable data={gradesData} />
+      <GradesTable data={gradesData} darkMode={darkMode} />
 
       {/* Gráfico */}
       <GradesChart
