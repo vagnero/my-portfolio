@@ -11,7 +11,7 @@ import {
   Nav,
   NavItem,
 } from "reactstrap";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import type { i18n, TFunction } from "i18next";
 import { PageWrapper } from "./PageWrapper";
 
@@ -35,26 +35,43 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
           <NavbarBrand tag={Link} to="/">
             {t("header.brand")}
           </NavbarBrand>
+<div className="d-flex align-items-center">
+  {/* Botão de idioma */}
+  <button className="btn btn-outline-primary btn-sm me-2" onClick={toggleLanguage}>
+    {i18n.language === "en" ? "PT" : "EN"}
+  </button>
 
-          <div className="d-flex align-items-center">
-            {/* Botão de idioma */}
-            <button className="btn btn-outline-primary btn-sm me-2" onClick={toggleLanguage}>
-              {i18n.language === "en" ? "PT" : "EN"}
-            </button>
+  {/* Switch de tema */}
+  <label className="dark-mode-switch mb-0 me-2 fs-6">
+    <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
+    <span className="dark-mode-slider">
+      <div className="icon-wrapper">
+        {darkMode ? <FaMoon size={14} color="#C5C5C5" /> : <FaSun size={14} color="#f1c40f" />}
+      </div>
+    </span>
+  </label>
 
-            {/* Switch de tema */}
-            <label className="dark-mode-switch mb-0 me-3 fs-6">
-              <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
-              <span className="dark-mode-slider">
-                <div className="icon-wrapper">
-                  {darkMode ? <FaMoon size={14} color="#C5C5C5" /> : <FaSun size={14} color="#f1c40f" />}
-                </div>
-              </span>
-            </label>
+  {/* Ícones sociais */}
+  <a
+    href="https://www.linkedin.com/in/vagner-da-silva-matias-967899263/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="me-2 d-none d-sm-inline"
+    title="LinkedIn"
+  >
+    <FaLinkedin size={25} color={darkMode ? "#fff" : "#0A66C2"} />
+  </a>
+  <a
+    href="vagnerimperador16@gmail.com"
+    className="me-2 d-none d-sm-inline"
+    title="Email"
+  >
+    <FaEnvelope size={25} color={darkMode ? "#fff" : "#333"} />
+  </a>
 
-            {/* Botão hamburguer para abrir o menu lateral */}
-            <NavbarToggler onClick={toggleOffcanvas} />
-          </div>
+  {/* Botão hamburguer */}
+  <NavbarToggler onClick={toggleOffcanvas} />
+</div>
         </Container>
       </PageWrapper>
 
