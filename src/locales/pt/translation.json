@@ -1,9 +1,17 @@
 {
-  "home": "Início",
-  "brand": "Meu Portfólio",
-  "about": "Sobre",
-  "projects": "Projetos",
-  "college": "Faculdade",
-  "contact": "Contato",
-  "footerText": "Meu Portfólio | Desenvolvido em React"
+  "header": {
+    "home": "Início",
+    "brand": "Meu Portfólio",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "college": "Faculdade",
+    "contact": "Contato"
+  },
+  "footer": {
+    "footerText": "Meu Portfólio | Desenvolvido em React"
+  },
+  "body": {
+    "welcome": "Bem-vindo ao meu portfólio!",
+    "description": "Aqui você pode ver meus projetos e habilidades."
+  }
 }

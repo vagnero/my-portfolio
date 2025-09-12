@@ -15,7 +15,7 @@ export default function Footer({ darkMode, t, i18n }: FooterProps) {
     >
       <PageWrapper language={i18n.language}>
         <Container>
-          <p>© {new Date().getFullYear()} - {t("footerText")}</p>
+          <p>© {new Date().getFullYear()} - {t("footer.footerText")}</p>
         </Container>
       </PageWrapper>
     </footer>

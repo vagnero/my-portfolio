@@ -37,11 +37,11 @@ function App() {
   <main>
     <PageWrapper language={language}>
       <Routes>
-        <Route path="/" element={<Home pageName={t("home")} />} />
-        <Route path="/about" element={<About pageName={t("about")} />} />
-        <Route path="/projects" element={<Projects pageName={t("projects")} />} />
-        <Route path="/contact" element={<Contact pageName={t("contact")} />} />
-        <Route path="/college" element={<College pageName={t("college")} darkMode={darkMode} />} />
+        <Route path="/" element={<Home pageName={t("header.home")} />} />
+        <Route path="/about" element={<About pageName={t("header.about")} />} />
+        <Route path="/projects" element={<Projects pageName={t("header.projects")} />} />
+        <Route path="/contact" element={<Contact pageName={t("header.contact")} />} />
+        <Route path="/college" element={<College pageName={t("header.college")} darkMode={darkMode} />} />
       </Routes>
     </PageWrapper>
   </main>

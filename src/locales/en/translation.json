@@ -1,9 +1,17 @@
 {
-  "home": "Home",
-  "brand": "My Portfolio",
-  "about": "About",
-  "projects": "Projects",
-  "college": "College",
-  "contact": "Contact",
-  "footerText": "My Portfolio | Built with React"
+  "header": {
+    "home": "Home",
+    "brand": "My Portfolio",
+    "about": "About",
+    "projects": "Projects",
+    "college": "College",
+    "contact": "Contact"
+  },
+  "footer": {
+    "footerText": "My Portfolio | Built with React"
+  },
+  "body": {
+    "welcome": "Welcome to my portfolio!",
+    "description": "Here you can see my projects and skills."
+  }
 }

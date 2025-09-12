@@ -1,9 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Navbar, NavbarBrand, Nav, NavItem, NavbarToggler, Collapse } from "reactstrap";
+import {
+  Container,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Offcanvas,
+  OffcanvasHeader,
+  OffcanvasBody,
+  Nav,
+  NavItem,
+} from "reactstrap";
 import { FaSun, FaMoon } from "react-icons/fa";
 import type { i18n, TFunction } from "i18next";
 import { PageWrapper } from "./PageWrapper";
+
 interface HeaderProps {
   toggleTheme: () => void;
   darkMode: boolean;
@@ -15,50 +26,67 @@ interface HeaderProps {
 const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  const toggleOffcanvas = () => setIsOpen(!isOpen);
 
   return (
+    <Navbar color={darkMode ? "dark" : "light"} dark={darkMode}>
+      <PageWrapper language={i18n.language}>
+        <Container className="d-flex justify-content-between align-items-center">
+          <NavbarBrand tag={Link} to="/">
+            {t("header.brand")}
+          </NavbarBrand>
 
-    <Navbar color={darkMode ? "dark" : "light"} dark={darkMode} expand="md">
-                  <PageWrapper language={i18n.language}>
+          <div className="d-flex align-items-center">
+            {/* Botão de idioma */}
+            <button className="btn btn-outline-primary me-2" onClick={toggleLanguage}>
+              {i18n.language === "en" ? "PT" : "EN"}
+            </button>
 
-      <Container className="d-flex justify-content-between align-items-center">
-          <NavbarBrand tag={Link} to="/">{t("brand")}</NavbarBrand>
+            {/* Switch de tema */}
+            <label className="dark-mode-switch mb-0 me-3">
+              <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
+              <span className="dark-mode-slider">
+                <div className="icon-wrapper">
+                  {darkMode ? <FaMoon size={14} color="#C5C5C5" /> : <FaSun size={14} color="#f1c40f" />}
+                </div>
+              </span>
+            </label>
 
-        {/* Botão hamburger */}
-        <NavbarToggler onClick={toggleNavbar} />
+            {/* Botão hamburguer para abrir o menu lateral */}
+            <NavbarToggler onClick={toggleOffcanvas} />
+          </div>
+        </Container>
+      </PageWrapper>
 
-        {/* Menu colapsável */}
-        <Collapse navbar isOpen={isOpen}>
-          <Nav navbar className="ms-auto d-flex align-items-center">
-            <NavItem><Link className="nav-link" to="/about">{t("about")}</Link></NavItem>
-            <NavItem><Link className="nav-link" to="/projects">{t("projects")}</Link></NavItem>
-            <NavItem><Link className="nav-link" to="/college">{t("college")}</Link></NavItem>
-            <NavItem><Link className="nav-link" to="/contact">{t("contact")}</Link></NavItem>
-
-            {/* Switch de tema + botão de linguagem */}
-            <NavItem className="d-flex align-items-center ms-3">
-              <label className="dark-mode-switch mb-0 me-2">
-                <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
-                <span className="dark-mode-slider">
-                  <div className="icon-wrapper">
-                    {darkMode ? <FaMoon size={14} color="#C5C5C5" /> : <FaSun size={14} color="#f1c40f" />}
-                  </div>
-                </span>
-              </label>
-
-              {/* Botão de idioma animado */}
-          <button className="btn btn-outline-primary ms-3" onClick={toggleLanguage}>
-          {i18n.language === "en" ? "PT" : "EN"}
-        </button>
+      {/* Menu lateral */}
+      <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end" className={darkMode ? "bg-dark text-light" : ""}>
+        <OffcanvasHeader toggle={toggleOffcanvas}>{t("header.brand")}</OffcanvasHeader>
+        <OffcanvasBody>
+          <Nav navbar className="flex-column">
+            <NavItem>
+              <Link className="nav-link" to="/about" onClick={toggleOffcanvas}>
+                {t("header.about")}
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/projects" onClick={toggleOffcanvas}>
+                {t("header.projects")}
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/college" onClick={toggleOffcanvas}>
+                {t("header.college")}
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/contact" onClick={toggleOffcanvas}>
+                {t("header.contact")}
+              </Link>
             </NavItem>
           </Nav>
-        </Collapse>
-      </Container>
-                  </PageWrapper>
-
+        </OffcanvasBody>
+      </Offcanvas>
     </Navbar>
-
   );
 };
 
