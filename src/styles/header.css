@@ -1,0 +1,9 @@
+/* Faz o X ficar branco no offcanvas escuro */
+.offcanvas.bg-dark .btn-close {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+.offcanvas.bg-dark .btn-close:hover {
+  opacity: 1;
+}

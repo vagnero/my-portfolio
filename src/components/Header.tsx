@@ -38,12 +38,12 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
 
           <div className="d-flex align-items-center">
             {/* Botão de idioma */}
-            <button className="btn btn-outline-primary me-2" onClick={toggleLanguage}>
+            <button className="btn btn-outline-primary btn-sm me-2" onClick={toggleLanguage}>
               {i18n.language === "en" ? "PT" : "EN"}
             </button>
 
             {/* Switch de tema */}
-            <label className="dark-mode-switch mb-0 me-3">
+            <label className="dark-mode-switch mb-0 me-3 fs-6">
               <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
               <span className="dark-mode-slider">
                 <div className="icon-wrapper">
@@ -59,7 +59,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
       </PageWrapper>
 
       {/* Menu lateral */}
-      <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end" className={darkMode ? "bg-dark text-light" : ""}>
+      <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end" className={`${darkMode ? "bg-dark text-light" : ""}`}>
         <OffcanvasHeader toggle={toggleOffcanvas}>{t("header.brand")}</OffcanvasHeader>
         <OffcanvasBody>
           <Nav navbar className="flex-column">

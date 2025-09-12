@@ -1,0 +1,11 @@
+/* no desktop deixa estreito */
+.offcanvas-responsive {
+  width: 250px !important;
+}
+
+/* mas no mobile ocupa 100% */
+@media (max-width: 768px) {
+  .offcanvas-responsive {
+    width: 100% !important;
+  }
+}
