@@ -37,7 +37,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
           </NavbarBrand>
           <div className="d-flex align-items-center">
             {/* Botão de idioma */}
-            <button className="btn btn-outline-primary btn-sm me-2" onClick={toggleLanguage}>
+            <button className="btn btn-outline-primary lang-btn me-2" onClick={toggleLanguage}>
               {i18n.language === "en" ? "PT" : "EN"}
             </button>
 
@@ -70,7 +70,8 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
             </a>
 
             {/* Botão hamburguer */}
-            <NavbarToggler onClick={toggleOffcanvas} />
+            <NavbarToggler onClick={toggleOffcanvas} className="custom-toggler" />
+
           </div>
         </Container>
       </PageWrapper>

@@ -7,3 +7,27 @@
 .offcanvas.bg-dark .btn-close:hover {
   opacity: 1;
 }
+
+
+.lang-btn {
+  padding: 8px 12px;     /* deixa compacto */
+  font-size: 0.75rem;   /* ~12px */
+  line-height: 1;       /* altura menor */
+  border-radius: 6px;   /* arredondado, mas discreto */
+  height: 25px;         /* parecido com os ícones de 25px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.custom-toggler {
+  padding: 2px 6px;     /* menos espaço interno */
+  font-size: 0.8rem;    /* reduz o tamanho do ícone hamburguer */
+  line-height: 1;       
+}
+
+.custom-toggler .navbar-toggler-icon {
+  width: 30px;   /* largura menor */
+  height: 27px;  /* altura menor */
+}
