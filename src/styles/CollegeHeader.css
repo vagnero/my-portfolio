@@ -9,30 +9,84 @@
   margin-bottom: 20px;
 }
 
-/* Container das imagens */
-.images-container {
+/* Container do carousel */
+.carousel-container {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 150px auto;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  padding-bottom: 40px; /* 🔑 espaço extra no fundo */
 }
 
-/* Cada link da imagem */
-.image-link {
-  display: inline-block;
-  transition: transform 0.2s;
-}
 
-.image-link:hover {
-  transform: scale(1.05);
-}
-
-/* Miniatura da imagem */
-.image-thumb {
-  width: 200px; /* define largura fixa */
-  height: auto;  /* mantém proporção */
+/* Imagem principal */
+.carousel-image {
+  width: 100%;
+  max-height: 700px;
+  object-fit: contain; /* mostra toda a imagem branca */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
+/* Botões de navegação */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Indicadores (bolinhas) */
+/* Indicadores (bolinhas) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px; /* fixa sempre no rodapé do carousel */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0; /* remove a margem antiga */
+  padding: 0;
+  width: 100%;
+}
+
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
