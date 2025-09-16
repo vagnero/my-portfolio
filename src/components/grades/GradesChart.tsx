@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
   Label,
 } from "recharts";
-
+import type { TFunction } from "i18next";
 interface Grade {
   Semestre: number;
   Nota: number;
@@ -17,9 +17,10 @@ interface Grade {
 
 interface GradesChartProps {
   data: Grade[];
+  t: TFunction;
 }
 
-const GradesChart = ({ data }: GradesChartProps) => {
+const GradesChart = ({ data, t }: GradesChartProps) => {
   // Agrupa por semestre
   const semesterData = Array.from(
     data.reduce((map, grade) => {
@@ -40,13 +41,13 @@ const GradesChart = ({ data }: GradesChartProps) => {
         <LineChart data={semesterData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="Semestre">
-            <Label value="Semestre" offset={-5} position="insideBottom" />
+            <Label value={t("college.chart.xAxis")} offset={-5} position="insideBottom" />
           </XAxis>
           <YAxis domain={[0, 10]}>
-            <Label value="Média Ponderada" angle={-90} position="insideLeft" style={{ textAnchor: "middle" }} />
+            <Label value={t("college.chart.yAxis")} angle={-90} position="insideLeft" style={{ textAnchor: "middle" }} />
           </YAxis>
           <Tooltip />
-          <Line name="Média Ponderada" type="monotone" dataKey="Nota" stroke="#3b82f6" strokeWidth={2} />
+          <Line name={t("college.chart.line")} type="monotone" dataKey="Nota" stroke="#3b82f6" strokeWidth={2} />
         </LineChart>
       </ResponsiveContainer>
     </div>

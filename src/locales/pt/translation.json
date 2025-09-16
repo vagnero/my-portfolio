@@ -13,5 +13,420 @@
   "body": {
     "welcome": "Bem-vindo ao meu portfólio!",
     "description": "Aqui você pode ver meus projetos e habilidades."
+  },
+
+ "college": {
+    "tableHeaders": {
+      "semester": "Semestre",
+      "year": "Ano",
+      "course": "Curso",
+      "grade": "Nota",
+      "hours": "Horas",
+      "status": "Status"
+    },
+    "tableFooters": {
+      "weightedAverage": "Média Ponderada"
+    },
+
+    "chart": {
+      "title": "Notas da Faculdade",
+      "xAxis": "Semestre",
+      "yAxis": "Média Ponderada",
+      "line": "Média Ponderada"
+    }
+
+  },
+
+
+
+
+
+
+  "grades": [
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Empreendedorismo",
+    "Nota": 7.4,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Arquitetura e Organização de Computadores",
+    "Nota": 8.5,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Algoritmos e Lógica de Programação",
+    "Nota": 8.6,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Inteligência Emocional e Autoconhecimento",
+    "Nota": 8.2,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Introdução ao Desenvolvimento de Sistemas",
+    "Nota": 7.8,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Inglês I",
+    "Nota": 8.2,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Projeto Integrador I",
+    "Nota": 8.3,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 1,
+    "Ano": 2022,
+    "Disciplina": "Matemática Discreta",
+    "Nota": 8.5,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Projeto Integrador II",
+    "Nota": 8.7,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Programação Orientada a Objetos",
+    "Nota": 8.8,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Sistemas de Informação",
+    "Nota": 8.4,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Inglês II",
+    "Nota": 8.5,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Engenharia de Software I",
+    "Nota": 8.5,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Estatística Aplicada",
+    "Nota": 8.7,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Ética e Responsabilidade Profissional",
+    "Nota": 10.0,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 2,
+    "Ano": 2023,
+    "Disciplina": "Contabilidade",
+    "Nota": 9.2,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Planejamento Financeiro",
+    "Nota": 7.8,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Engenharia de Software II",
+    "Nota": 8.1,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Banco de Dados",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Inglês III",
+    "Nota": 8.5,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Estruturas de Dados",
+    "Nota": 9.8,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Programação para WEB",
+    "Nota": 9.8,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Interação Humano Computador",
+    "Nota": 9.1,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+    {
+    "Semestre": 3,
+    "Ano": 2023,
+    "Disciplina": "Projeto Integrador III",
+    "Nota": 9.2,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Projeto Integrador IV",
+    "Nota": 9.7,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+{
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Sistemas Operacionais",
+    "Nota": 9.4,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Programação para Dispositivos Móveis I",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+{
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Metodologia da Pesquisa Científico-tecnológica",
+    "Nota": 8.3,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+    {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Desenvolvimento de Sistemas",
+    "Nota": 9.8,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Inglês IV",
+    "Nota": 8.7,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Laboratório de Banco de Dados",
+    "Nota": 9.9,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Engenharia de Software III",
+    "Nota": 9.4,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 4,
+    "Ano": 2024,
+    "Disciplina": "Gestão de Equipes",
+    "Nota": 8.1,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Tópicos em Bancos de Dados e Big Data",
+    "Nota": 9.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Inglês V",
+    "Nota": 9.7,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Teste de Software",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Redes de Computadores",
+    "Nota": 8.7,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Sistemas Distribuídos",
+    "Nota": 9.5,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Inteligência Artificial e Aplicações",
+    "Nota": 7.6,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+   {
+    "Semestre": 5,
+    "Ano": 2024,
+    "Disciplina": "Programação para Dispositivos Móveis II",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Gestão e Governança de Tecnologia da Informação",
+    "Nota": 10.0,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Computação Cognitiva",
+    "Nota": 9.2,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Visão Computacional",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Segurança da Informação",
+    "Nota": 8.8,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Inglês VI",
+    "Nota": 10.0,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Internet das Coisas",
+    "Nota": 8.8,
+    "CargaHoraria": 40,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Laboratório de Engenharia de Software",
+    "Nota": 8.3,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
+  },
+  {
+    "Semestre": 6,
+    "Ano": 2025,
+    "Disciplina": "Gestão de Projetos",
+    "Nota": 10.0,
+    "CargaHoraria": 80,
+    "Situacao": "AP"
   }
+]
+
 }

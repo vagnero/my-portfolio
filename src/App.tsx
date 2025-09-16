@@ -41,7 +41,7 @@ function App() {
         <Route path="/about" element={<About pageName={t("header.about")} />} />
         <Route path="/projects" element={<Projects pageName={t("header.projects")} />} />
         <Route path="/contact" element={<Contact pageName={t("header.contact")} />} />
-        <Route path="/college" element={<College pageName={t("header.college")} darkMode={darkMode} />} />
+        <Route path="/college" element={<College pageName={t("header.college")} darkMode={darkMode} t={t} i18n={i18n} />} />
       </Routes>
     </PageWrapper>
   </main>

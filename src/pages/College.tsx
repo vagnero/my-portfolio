@@ -3,6 +3,8 @@ import GradesTable from "../components/grades/GradesTable";
 import GradesChart from "../components/grades/GradesChart";
 import CollegeHeader from "../components/grades/CollegeHeader";
 import useDocumentTitle from "../hooks/useDocumentTitle";
+import type { i18n, TFunction } from "i18next";
+
 
 interface Grade {
   Semestre: number;
@@ -16,17 +18,21 @@ interface Grade {
 interface PageProps {
   pageName: string;
   darkMode: boolean;
+  t: TFunction;
+  i18n: i18n;
 }
 
-const College = ({ pageName, darkMode }: PageProps) => {
+const College = ({ pageName, darkMode, t }: PageProps) => {
   useDocumentTitle(pageName, "Default");
   const [gradesData, setGradesData] = useState<Grade[]>([]);
 
   // Carrega o JSON do public
   useEffect(() => {
-    fetch("/my-portfolio/data/grades.json")
-      .then((res) => res.json())
-      .then((data) => setGradesData(data));
+    // fetch("/my-portfolio/data/grades.json")
+    //   .then((res) => res.json())
+    //   .then((data) => setGradesData(data));
+    const data = t("grades", { returnObjects: true }) as Grade[];
+    setGradesData(data);
   }, []);
 
   const images = [
@@ -41,11 +47,11 @@ const College = ({ pageName, darkMode }: PageProps) => {
       <CollegeHeader images={images} title={pageName} />
 
       {/* Tabela de notas */}
-      <GradesTable data={gradesData} darkMode={darkMode} />
+      <GradesTable data={gradesData} darkMode={darkMode} t={t} />
 
       {/* Gráfico */}
       <GradesChart
-        data={gradesData}
+        data={gradesData} t={t}
       />
     </div>
   );
