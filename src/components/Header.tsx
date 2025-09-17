@@ -29,7 +29,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
   const toggleOffcanvas = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color={darkMode ? "dark" : "light"} dark={darkMode}>
+    <Navbar color={darkMode ? "dark" : "light"} dark={darkMode} fixed="top">
       <PageWrapper language={i18n.language}>
         <Container className="d-flex justify-content-between align-items-center">
           <NavbarBrand tag={Link} to="/">
