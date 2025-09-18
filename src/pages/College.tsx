@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import Certificates from "../components/grades/Certificates";
 import GradesTable from "../components/grades/GradesTable";
 import GradesChart from "../components/grades/GradesChart";
-import CollegeHeader from "../components/grades/CollegeHeader";
+import CollegeCarousel from "../components/grades/CollegeCarousel";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import type { i18n, TFunction } from "i18next";
 
@@ -43,11 +44,18 @@ const College = ({ pageName, darkMode, t }: PageProps) => {
 
   return (
     <div className="container mx-auto px-4">
+      {/* Título principal da página */}
+      <h1 className="fw-bold mb-5 text-center">{pageName}</h1>
+
+      <Certificates title={t("college.certificates.title")} t={t} darkMode={darkMode} />
+
       {/* Cabeçalho com título e imagens */}
-      <CollegeHeader images={images} title={pageName} />
+      <CollegeCarousel images={images} title={t("college.tableHeaders.title")} darkMode={darkMode} />
 
       {/* Tabela de notas */}
       <GradesTable data={gradesData} darkMode={darkMode} t={t} />
+
+      {/* Certificados */}
 
       {/* Gráfico */}
       <GradesChart

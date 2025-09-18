@@ -1,4 +1,4 @@
-.college-header {
+.college-carousel {
   text-align: center;
   margin: 80px 0;
 }
@@ -17,7 +17,6 @@
   align-items: center;
   max-width: 800px;
   margin: 0 auto 150px auto;
-  background-color: #000;
   border-radius: 10px;
   overflow: hidden;
   padding: 10px;

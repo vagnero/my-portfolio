@@ -15,7 +15,15 @@
     "description": "Here you can see my projects and skills."
   },
   "college": {
+    "certificates": {
+    "title": "Certificates",
+    "titleConclusionCertificate": "Higher Education Completion Certificate",
+    "descriptionConclusionCertificate": "The Director of the Faculty of Technology of Ferraz de Vasconcelos certifies that Vagner da Silva Matias, born on 12/24/1999, completed the Higher Education Course in Technology in Systems Analysis and Development on July 15, 2025, and graduated on August 23, 2025, receiving the title of Technologist.",
+    "titleAcademicMeritCertificate": "Student Merit Certificate",
+    "descriptionAcademicMeritCertificate": "The Faculty of Technology of Ferraz de Vasconcelos awards this certificate of honor to Vagner da Silva Matias for having distinguished himself as the best student of the 9th class of the Higher Education Course in Technology in Systems Analysis and Development."
+  },
     "tableHeaders": {
+      "title": "College Grades",
       "semester": "Semester",
       "year": "Year",
       "course": "Course",
@@ -23,12 +31,17 @@
       "hours": "Hours",
       "status": "Status"
     },
+      "titles":{
+      "certificates": "Certificates",
+      "grades": "College Grades",
+      "chart": "Grades Chart"
+    },
     "tableFooters": {
       "weightedAverage": "Weighted Average"
     },
 
     "chart": {
-    "title": "College Grades",
+    "title": "Grades Chart",
     "xAxis": "Semester",
     "yAxis": "Weighted Average",
     "line": "Weighted Average"

@@ -1,3 +1,8 @@
+
+body{
+  padding-top: 80px; /* ajusta conforme a altura do seu Header */
+
+}
 /* no desktop deixa estreito */
 .offcanvas-responsive {
   width: 250px !important;

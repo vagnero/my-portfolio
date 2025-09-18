@@ -16,7 +16,15 @@
   },
 
  "college": {
+  "certificates": {
+    "title": "Certificados",
+    "titleConclusionCertificate": "Certificado de Conclusão do Ensino Superior",
+    "descriptionConclusionCertificate": "O Diretor da Faculdade de Tecnologia de Ferraz de Vasconcelos certifica que Vagner da Silva Matias, nascido em 24/12/1999, concluiu o Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas em 15 de julho de 2025, tendo colado grau em 23 de agosto de 2025, recebendo o título de Tecnólogo.",
+    "titleAcademicMeritCertificate": "Certificado de Mérito Estudantil",
+    "descriptionAcademicMeritCertificate": "A Faculdade de Tecnologia de Ferraz de Vasconcelos concede o certificado de honra ao mérito a Vagner da Silva Matias, por ter se destacado como o melhor aluno da 9ª turma do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas."
+  },
     "tableHeaders": {
+      "title": "Notas da Faculdade",
       "semester": "Semestre",
       "year": "Ano",
       "course": "Curso",
@@ -29,7 +37,7 @@
     },
 
     "chart": {
-      "title": "Notas da Faculdade",
+      "title": "Gráfico de Notas",
       "xAxis": "Semestre",
       "yAxis": "Média Ponderada",
       "line": "Média Ponderada"
