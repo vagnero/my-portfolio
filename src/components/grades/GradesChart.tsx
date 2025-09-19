@@ -38,7 +38,7 @@ const GradesChart = ({ data, title, t, darkMode }: GradesChartProps) => {
   }));
 
 return (
-  <div>
+  <div style={{ marginTop: "100px", marginBottom: "60px" }}>
     <h2 className="component-title text-center">{title}</h2>
     <div
       style={{
