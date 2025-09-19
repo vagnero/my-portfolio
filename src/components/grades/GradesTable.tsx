@@ -1,4 +1,5 @@
-import { Table } from "reactstrap";
+import { useState } from "react";
+import { Table, Button } from "reactstrap";
 import type { TFunction } from "i18next";
 
 interface Grade {
@@ -16,7 +17,9 @@ interface GradesTableProps {
   t: TFunction;
 }
 
-const GradesTable = ({ data, darkMode, t }: GradesTableProps ) => {
+const GradesTable = ({ data, darkMode, t }: GradesTableProps) => {
+  const [expanded, setExpanded] = useState(false);
+
   // Média ponderada geral
   const totalWeighted = data.reduce(
     (acc, cur) => acc + cur.Nota * cur.CargaHoraria,
@@ -25,9 +28,18 @@ const GradesTable = ({ data, darkMode, t }: GradesTableProps ) => {
   const totalHours = data.reduce((acc, cur) => acc + cur.CargaHoraria, 0);
   const weightedAverage = totalWeighted / totalHours || 0;
 
+  // Mostrar só 10 linhas se não estiver expandido
+  const visibleData = expanded ? data : data.slice(0, 10);
+
   return (
     <div className="grades-table-container">
-      <Table bordered striped hover responsive color={darkMode ? "dark" : "light"} dark={darkMode}>
+      <Table
+        bordered
+        striped
+        hover
+        responsive
+        className={darkMode ? "table-light text-dark" : "table-dark text-light"}
+      >
         <thead>
           <tr>
             <th>{t("college.tableHeaders.semester")}</th>
@@ -35,18 +47,16 @@ const GradesTable = ({ data, darkMode, t }: GradesTableProps ) => {
             <th>{t("college.tableHeaders.course")}</th>
             <th>{t("college.tableHeaders.grade")}</th>
             <th>{t("college.tableHeaders.hours")}</th>
-            <th>{t("college.tableHeaders.status")}</th>
           </tr>
         </thead>
         <tbody>
-          {data.map((grade, idx) => (
+          {visibleData.map((grade, idx) => (
             <tr key={idx}>
               <td>{grade.Semestre}</td>
               <td>{grade.Ano}</td>
               <td>{grade.Disciplina}</td>
               <td>{grade.Nota}</td>
               <td>{grade.CargaHoraria}</td>
-              <td>{grade.Situacao}</td>
             </tr>
           ))}
         </tbody>
@@ -54,10 +64,22 @@ const GradesTable = ({ data, darkMode, t }: GradesTableProps ) => {
           <tr>
             <td colSpan={3}>{t("college.tableFooters.weightedAverage")}</td>
             <td>{weightedAverage.toFixed(2)}</td>
-            <td colSpan={2}></td>
+            <td></td>
           </tr>
         </tfoot>
       </Table>
+
+      {/* Botão para expandir/colapsar */}
+      {data.length > 10 && (
+ <div className="text-center mt-2 mb-4">
+  <Button
+    color={darkMode ? "dark" : "light"}
+    onClick={() => setExpanded(!expanded)}
+  >
+    {expanded ? t("college.tableHeaders.showLess") : t("college.tableHeaders.showMore")}
+  </Button>
+</div>
+      )}
     </div>
   );
 };

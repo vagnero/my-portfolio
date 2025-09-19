@@ -59,7 +59,7 @@ const College = ({ pageName, darkMode, t }: PageProps) => {
 
       {/* Gráfico */}
       <GradesChart
-        data={gradesData} t={t}
+        data={gradesData} title={t("college.chart.title")} t={t} darkMode={darkMode}
       />
     </div>
   );

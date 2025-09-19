@@ -3,6 +3,7 @@ body{
   padding-top: 80px; /* ajusta conforme a altura do seu Header */
 
 }
+
 /* no desktop deixa estreito */
 .offcanvas-responsive {
   width: 250px !important;
@@ -13,4 +14,10 @@ body{
   .offcanvas-responsive {
     width: 100% !important;
   }
+}
+
+.h2, .component-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }

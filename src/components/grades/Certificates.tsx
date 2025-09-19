@@ -27,7 +27,7 @@ const Certificates = ({ title, t, darkMode }: CertificatesProps) => {
       <Row>
         {certs.map((cert, index) => (
           <Col md="6" xs="12" key={index} className="mb-4">
-            <Card className={`shadow-sm h-100 ${darkMode ? "bg-light text-dark" : "bg-dark text-light"}`}>
+            <Card className={`shadow-sm h-100 ${darkMode ? "bg-body-secondary text-dark" : "bg-dark text-light"}`}>
               <a
                 href={cert.src}
                 target="_blank"

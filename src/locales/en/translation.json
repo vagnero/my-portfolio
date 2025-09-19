@@ -29,7 +29,9 @@
       "course": "Course",
       "grade": "Grade",
       "hours": "Hours",
-      "status": "Status"
+      "status": "Status",
+      "showMore": "Show More",
+      "showLess": "Show Less"
     },
       "titles":{
       "certificates": "Certificates",

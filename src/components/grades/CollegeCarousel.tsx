@@ -20,7 +20,7 @@ const CollegeCarousel  = ({ images, title, darkMode }: CollegeCarouselProps) => 
   return (
     <div className="college-carousel">
       <h2 className="college-title">{title}</h2>
-      <div className={`carousel-container ${darkMode ? "bg-light" : "bg-dark"}`}>
+      <div className={`carousel-container ${darkMode ? "bg-body-secondary" : "bg-dark"}`}>
       
         <button className="carousel-btn prev" onClick={prevSlide}>
           &#10094;

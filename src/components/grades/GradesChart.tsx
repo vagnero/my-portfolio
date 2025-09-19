@@ -17,10 +17,12 @@ interface Grade {
 
 interface GradesChartProps {
   data: Grade[];
+  title: string;
   t: TFunction;
+  darkMode: boolean;
 }
 
-const GradesChart = ({ data, t }: GradesChartProps) => {
+const GradesChart = ({ data, title, t, darkMode }: GradesChartProps) => {
   // Agrupa por semestre
   const semesterData = Array.from(
     data.reduce((map, grade) => {
@@ -35,23 +37,75 @@ const GradesChart = ({ data, t }: GradesChartProps) => {
     Nota: +(sum / hours).toFixed(2),
   }));
 
-  return (
-    <div style={{ width: "100%", height: "300px", marginTop: "24px", marginBottom: "24px", border: "1px solid #ddd", borderRadius: "8px", padding: "16px", boxSizing: "border-box" }}>
+return (
+  <div>
+    <h2 className="component-title text-center">{title}</h2>
+    <div
+      style={{
+        width: "100%",
+        height: "300px",
+        marginTop: "24px",
+        marginBottom: "24px",
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        padding: "16px",
+        boxSizing: "border-box",
+        ...(darkMode
+          ? { backgroundColor: "#f8f9fa", color: "#000" } 
+          : { backgroundColor: "#343a40", color: "#fff" }), 
+      }}
+    >
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={semesterData}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="Semestre">
-            <Label value={t("college.chart.xAxis")} offset={-5} position="insideBottom" />
+
+          <XAxis
+            dataKey="Semestre"
+            tick={{ fill: darkMode ? "#000" : "#fff" }}
+          >
+            <Label
+              value={t("college.chart.xAxis")}
+              offset={-5}
+              position="insideBottom"
+              style={{ fill: darkMode ? "#000" : "#fff" }}
+            />
           </XAxis>
-          <YAxis domain={[0, 10]}>
-            <Label value={t("college.chart.yAxis")} angle={-90} position="insideLeft" style={{ textAnchor: "middle" }} />
+
+          <YAxis
+            domain={[0, 10]}
+            tick={{ fill: darkMode ? "#000" : "#fff" }}
+          >
+            <Label
+              value={t("college.chart.yAxis")}
+              angle={-90}
+              position="insideLeft"
+              style={{
+                textAnchor: "middle",
+                fill: darkMode ? "#000" : "#fff",
+              }}
+            />
           </YAxis>
-          <Tooltip />
-          <Line name={t("college.chart.line")} type="monotone" dataKey="Nota" stroke="#3b82f6" strokeWidth={2} />
+
+          <Tooltip
+            contentStyle={{
+              backgroundColor: darkMode ? "#fff" : "#222",
+              color: darkMode ? "#000" : "#fff",
+              borderRadius: "6px",
+            }}
+          />
+
+          <Line
+            name={t("college.chart.line")}
+            type="monotone"
+            dataKey="Nota"
+            stroke="#3b82f6"
+            strokeWidth={2}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
-  );
+  </div>
+);
 }
 
 export default GradesChart;

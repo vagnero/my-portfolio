@@ -30,7 +30,9 @@
       "course": "Curso",
       "grade": "Nota",
       "hours": "Horas",
-      "status": "Status"
+      "status": "Status",
+      "showMore": "Mostrar Mais",
+      "showLess": "Mostrar Menos"
     },
     "tableFooters": {
       "weightedAverage": "Média Ponderada"
