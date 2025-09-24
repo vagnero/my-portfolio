@@ -82,6 +82,9 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
         <OffcanvasBody>
           <Nav navbar className="flex-column">
             <NavItem>
+              <Link className="nav-link" to="/resume" onClick={toggleOffcanvas}>
+                {t("header.resume")}
+              </Link>
               <Link className="nav-link" to="/about" onClick={toggleOffcanvas}>
                 {t("header.about")}
               </Link>

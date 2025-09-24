@@ -13,6 +13,7 @@ import type { RootState } from "./store";
 import React from "react";
 import { PageWrapper } from "./components/PageWrapper";
 import College from "./pages/College";
+import Resume from "./pages/Resume";
 function App() {
   const dispatch = useDispatch();
   
@@ -37,7 +38,8 @@ function App() {
   <main>
     <PageWrapper language={language}>
       <Routes>
-        <Route path="/" element={<Home pageName={t("header.home")} />} />
+        <Route path="/" element={<Home pageName={t("header.home")} darkMode={darkMode} t={t} />} />
+        <Route path="/resume" element={<Resume darkMode={darkMode} pageName={t("header.resume")} t={t} />} />
         <Route path="/about" element={<About pageName={t("header.about")} />} />
         <Route path="/projects" element={<Projects pageName={t("header.projects")} />} />
         <Route path="/contact" element={<Contact pageName={t("header.contact")} />} />

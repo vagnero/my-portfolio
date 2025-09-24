@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "brand": "My Portfolio",
+    "resume": "Resume",
     "about": "About",
     "projects": "Projects",
     "college": "College",
@@ -50,6 +51,43 @@
   }
 
   },
+ "resume": {
+  "title": "Resume",
+  "summary": "Data Engineer Trainee with experience in system development and internal auditing...",
+  "experience": "Professional Experience",
+  "experience_list": [
+    {
+      "role": "GRC Consultant",
+      "company": "Grant Thornton Brazil",
+      "period": "Apr 2025 – Aug 2025",
+      "description": [
+        "Internal and external audits focused on SOX and COSO",
+        "Data analysis for compliance and risk assessment",
+        "Power BI dashboards and data manipulation in Excel",
+        "Collaboration in multidisciplinary teams"
+      ]
+    },
+    {
+      "role": "Database Assistant and Technical Support",
+      "company": "City Hall of Ferraz de Vasconcelos",
+      "period": "Jul 2024 – Mar 2025",
+      "description": [
+        "Data analysis of IEGM with Python and Power BI",
+        "Team projects (web/mobile) using GitHub",
+        "AWS virtual machines (VMs) and database management"
+      ]
+    }
+  ],
+  "education": "Education",
+  "education_list": [
+    "Technologist in Systems Analysis and Development — FATEC (Aug 2022 – Jul 2025)",
+    "Additional courses: AWS, Docker, React Native"
+  ],
+  "download": "Download Resume",
+  "downloadLink": "/my-portfolio/cv/Curriculo_Vagner_Matias_Portuguese.pdf"
+
+}
+,
 
 
 

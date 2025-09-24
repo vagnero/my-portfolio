@@ -2,6 +2,7 @@
   "header": {
     "home": "Início",
     "brand": "Meu Portfólio",
+    "resume": "Currículo",
     "about": "Sobre",
     "projects": "Projetos",
     "college": "Faculdade",
@@ -46,6 +47,41 @@
     }
 
   },
+ "resume": {
+  "title": "Currículo",
+  "summary": "Profissional com foco em Engenharia de Dados, atuando como Trainee...",
+  "experience": "Experiência Profissional",
+  "experience_list": [
+    {
+      "role": "Consultor GRC",
+      "company": "Grant Thornton Brasil",
+      "period": "Abr 2025 – Ago 2025",
+      "description": [
+        "Auditorias internas e externas com foco em SOX e COSO",
+        "Análise de dados para compliance e riscos",
+        "Dashboards com Power BI e manipulação de dados no Excel",
+        "Colaboração em equipes multidisciplinares"
+      ]
+    },
+    {
+      "role": "Auxiliar em Banco de Dados e Suporte Técnico",
+      "company": "Prefeitura de Ferraz de Vasconcelos",
+      "period": "Jul 2024 – Mar 2025",
+      "description": [
+        "Análise de dados do IEGM com Python e Power BI",
+        "Projetos web/mobile em equipe utilizando o Github",
+        "Uso de AWS para servidores (VM) e bancos de dados"
+      ]
+    }
+  ],
+  "education": "Formação",
+  "education_list": [
+    "Tecnólogo em Análise e Desenvolvimento de Sistemas — FATEC (Ago 2022 – Jul 2025)",
+    "Cursos complementares: AWS, Docker, React Native"
+  ],
+  "download": "Baixar Currículo",
+  "downloadLink": "/my-portfolio/cv/Curriculo_Vagner_Matias_Portuguese.pdf"
+},
 
 
 
