@@ -30,7 +30,7 @@ const Home: React.FC<PageProps> = ({ pageName, darkMode, t }) => {
       to: "/projects",
       title: t("header.projects"),
       image:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=60",
+        "/my-portfolio/images/projects.jpg",
     },
     {
       to: "/college",
