@@ -58,7 +58,7 @@ console.log("experienceList:", experienceList);
                   <h5 className="mb-1">
                     {exp.role} — {exp.company}
                   </h5>
-                  <p className="text-muted mb-2">{exp.period}</p>
+                  <p color={darkMode ? "light" : "dark"} className="text-muted mb-2">{exp.period}</p>
                   <ul>
                     {exp.description.map((item, i) => (
                       <li key={i}>{item}</li>

@@ -18,13 +18,13 @@ const Home: React.FC<PageProps> = ({ pageName, darkMode, t }) => {
       to: "/resume",
       title: t("header.resume"),
       image:
-        "./src/assets/images/cv.jpg",
+        "/my-portfolio/images/cv.jpg",
     },
     {
       to: "/about",
       title: t("header.about"),
       image:
-        "./src/assets/images/vagner3.jpeg",
+        "/my-portfolio/images/vagner3.jpeg",
     },
     {
       to: "/projects",
@@ -36,7 +36,7 @@ const Home: React.FC<PageProps> = ({ pageName, darkMode, t }) => {
       to: "/college",
       title: t("header.college"),
       image:
-        "./src/assets/images/college.jpg",
+        "/my-portfolio/images/college.jpg",
     },
     
   ];
@@ -44,8 +44,7 @@ const Home: React.FC<PageProps> = ({ pageName, darkMode, t }) => {
   return (
     <Container className="py-5">
       <div className="text-center mb-5">
-        <h1>👋 Welcome to my Portfolio</h1>
-        <p>Explore my projects, experiences, and more below.</p>
+
       </div>
 
       <Row className="g-4">
