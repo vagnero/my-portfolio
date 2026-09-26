@@ -739,12 +739,6 @@ input:focus-visible {
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.hero__certification {
-  display: inline-block;
-  margin-bottom: 0.85rem;
-  font-weight: 600;
-}
-
 .hero__summary {
   font-size: 1rem;
   line-height: 1.55;

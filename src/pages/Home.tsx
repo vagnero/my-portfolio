@@ -48,9 +48,6 @@ const Home = ({ pageName, t, language }: PageProps) => {
             <p className="hero__eyebrow">{t("portfolio.hero.eyebrow")}</p>
             <h1 id="hero-title">Vagner da Silva Matias</h1>
             <p className="hero__role">{t("portfolio.hero.role")}</p>
-            <a className="hero__certification" href={certificatePdf} target="_blank" rel="noopener noreferrer">
-              {t("portfolio.certification.title")} ↗
-            </a>
             <p className="hero__summary">{t("portfolio.hero.summary")}</p>
             <div className="hero__stack">
               <p className="content-panel__label">{t("portfolio.hero.stackLabel")}</p>
