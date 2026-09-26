@@ -12,9 +12,9 @@ const rootReducer = combineReducers({
 });
 
 const persistConfig = {
-  key: "root",
+  key: "portfolio-v2",
   storage,
-  whitelist: ["theme", "language"], 
+  whitelist: ["theme"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
