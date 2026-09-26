@@ -17,13 +17,19 @@
   },
   "portfolio": {
     "hero": {
-      "eyebrow": "Engenheiro de Dados",
-      "role": "Data Engineer",
-      "summary": "Construo e analiso soluções orientadas a dados, com foco em confiabilidade, integridade e disponibilidade para o negócio.",
+      "eyebrow": "Oportunidades Júnior / Pleno",
+      "role": "Engenheiro de Dados",
+      "summary": "Pipelines de dados, ETL e orquestração. Experiência como Engenheiro de Dados Júnior na LEEGA, no projeto Santander Seguros; atualmente Consultor de TI na ECOVIS WFA, com Python e Airflow.",
       "primaryAction": "Ver projetos",
-      "resumeAction": "Baixar currículo",
+      "resumeAction": "Baixar currículo (PDF)",
       "linkedin": "LinkedIn",
-      "github": "GitHub"
+      "github": "GitHub",
+      "stackLabel": "Stack principal",
+      "profilesLabel": "Perfis profissionais e contato",
+      "featuredLabel": "Projeto em destaque",
+      "featuredTitle": "Pipeline de e-commerce · Python + Airflow",
+      "featuredSummary": "API → Bronze / Silver / Gold → PostgreSQL. MVP local com Docker; evolução AWS documentada.",
+      "featuredAction": "Ver estudo de caso"
     },
     "technologies": {
       "eyebrow": "Stack técnica",
@@ -38,7 +44,7 @@
     "experience": {
       "eyebrow": "Trajetória",
       "title": "Experiência com dados e sistemas",
-      "description": "Experiências em auditoria, análise, bancos de dados e suporte técnico que sustentam minha transição para Engenharia de Dados."
+      "description": "Atuação em Engenharia de Dados na LEEGA e em ETL e orquestração na ECOVIS WFA, além de experiência com análise de dados no setor público."
     },
     "projects": {
       "eyebrow": "Portfólio técnico",

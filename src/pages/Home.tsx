@@ -1,5 +1,5 @@
 import type { TFunction } from "i18next";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CertificationCard from "../components/home/CertificationCard";
 import SectionHeading from "../components/home/SectionHeading";
@@ -32,7 +32,7 @@ const Home = ({ pageName, t, language }: PageProps) => {
   const technologyGroups = t("portfolio.technologies.groups", { returnObjects: true }) as TechnologyGroup[];
   const experienceList = t("resume.experience_list", { returnObjects: true }) as ExperienceItem[];
   const linkedinUrl = "https://www.linkedin.com/in/vagner-da-silva-matias-967899263/";
-  const githubUrl = "https://github.com/?locale=pt-br";
+  const githubUrl = "https://github.com/vagnero";
   const emailUrl = "mailto:vagner_matias1@outlook.com";
   const certificatePdf = assetPath("certificates/AWS Certified Data Engineer - Associate certificate.pdf");
   const certificateImage = assetPath("certificates/AWSDataEngineeringAssociate.png");
@@ -48,56 +48,80 @@ const Home = ({ pageName, t, language }: PageProps) => {
             <p className="hero__eyebrow">{t("portfolio.hero.eyebrow")}</p>
             <h1 id="hero-title">Vagner da Silva Matias</h1>
             <p className="hero__role">{t("portfolio.hero.role")}</p>
+            <a className="hero__certification" href={certificatePdf} target="_blank" rel="noopener noreferrer">
+              {t("portfolio.certification.title")} ↗
+            </a>
             <p className="hero__summary">{t("portfolio.hero.summary")}</p>
+            <div className="hero__stack">
+              <p className="content-panel__label">{t("portfolio.hero.stackLabel")}</p>
+              <ul className="technology-list">
+                {["Python", "SQL", "AWS", "Databricks", "Apache Airflow", "PostgreSQL"].map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
             <div className="hero__actions">
-              <Link className="portfolio-button" to="/projects">
-                {t("portfolio.hero.primaryAction")}
-              </Link>
-              <a className="portfolio-button portfolio-button--secondary" href={resumeUrl} download>
+              <a className="portfolio-button" href={resumeUrl} download>
                 {t("portfolio.hero.resumeAction")}
               </a>
+              <a className="portfolio-button portfolio-button--secondary" href={emailUrl}>
+                <FaEnvelope aria-hidden="true" /> {t("portfolio.contact.email")}
+              </a>
+              <Link className="inline-link" to="/projects">{t("portfolio.hero.primaryAction")}</Link>
             </div>
-            <nav className="social-links" aria-label="Professional profiles">
+            <nav className="social-links" aria-label={t("portfolio.hero.profilesLabel")}>
               <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin aria-hidden="true" /> {t("portfolio.hero.linkedin")}
               </a>
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <FaGithub aria-hidden="true" /> {t("portfolio.hero.github")}
               </a>
+              <a href={emailUrl}>vagner_matias1@outlook.com</a>
             </nav>
           </div>
-          <aside className="hero__proof" aria-labelledby="certification-proof-title">
-            <p className="hero__proof-label">{t("portfolio.certification.eyebrow")}</p>
-            <h2 id="certification-proof-title">{t("portfolio.certification.title")}</h2>
-            <a href={certificatePdf} target="_blank" rel="noopener noreferrer">
-              <img src={certificateImage} alt={t("portfolio.certification.title")} />
-            </a>
-            <a className="portfolio-button" href={certificatePdf} target="_blank" rel="noopener noreferrer">
-              {t("portfolio.certification.view")}
-            </a>
+          <aside className="hero__proof" aria-labelledby="featured-project-title">
+            <p className="hero__proof-label">{t("portfolio.hero.featuredLabel")}</p>
+            <h2 id="featured-project-title">{t("portfolio.hero.featuredTitle")}</h2>
+            <p className="prose">{t("portfolio.hero.featuredSummary")}</p>
+            <Link className="portfolio-button portfolio-button--secondary" to="/projects">
+              {t("portfolio.hero.featuredAction")}
+            </Link>
           </aside>
         </div>
       </section>
 
       <div className="portfolio-main">
-        <section className="portfolio-section" id="technologies" aria-labelledby="technologies-title">
+        <section className="portfolio-section" id="projects" aria-labelledby="projects-title">
           <div className="portfolio-container">
             <SectionHeading
-              eyebrow={t("portfolio.technologies.eyebrow")}
-              title={t("portfolio.technologies.title")}
-              description={t("portfolio.technologies.description")}
-              id="technologies-title"
+              eyebrow={t("portfolio.projects.eyebrow")}
+              title={t("portfolio.projects.title")}
+              description={t("portfolio.projects.description")}
+              id="projects-title"
             />
-            <div className="technology-grid">
-              {technologyGroups.map((group) => (
-                <article className="content-panel" key={group.title}>
-                  <h3>{group.title}</h3>
-                  <ul className="technology-list">
-                    {group.items.map((item) => <li key={item}>{item}</li>)}
-                  </ul>
-                </article>
-              ))}
+            <div className="project-grid project-grid--featured">
+              <article className="project-card">
+                <a className="project-card__image-link" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready" target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="project-card__image"
+                    src="https://raw.githubusercontent.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready/main/src/images/desafio-engenharia-de-dados.jpg"
+                    alt={t("portfolio.projects.batchPipeline.imageAlt")}
+                  />
+                </a>
+                <p className="project-card__meta">{t("portfolio.projects.batchPipeline.meta")}</p>
+                <h3>{t("portfolio.projects.batchPipeline.title")}</h3>
+                <p className="prose">{t("portfolio.projects.batchPipeline.description")}</p>
+                <div className="project-card__flow" aria-label={t("portfolio.projects.batchPipeline.flowLabel")}>
+                  {(t("portfolio.projects.batchPipeline.flow", { returnObjects: true }) as string[]).map((step) => <span key={step}>{step}</span>)}
+                </div>
+                <ul className="project-card__stack">
+                  {(t("portfolio.projects.batchPipeline.stack", { returnObjects: true }) as string[]).map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <div className="project-card__footer">
+                  <a className="portfolio-button" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready" target="_blank" rel="noopener noreferrer">{t("portfolio.projects.batchPipeline.code")}</a>
+                  <a className="portfolio-button portfolio-button--secondary" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready#arquitetura-do-projeto" target="_blank" rel="noopener noreferrer">{t("portfolio.projects.batchPipeline.readme")}</a>
+                </div>
+              </article>
             </div>
+            <p><Link className="inline-link" to="/projects">{t("portfolio.projects.openProjects")}</Link></p>
           </div>
         </section>
 
@@ -124,39 +148,24 @@ const Home = ({ pageName, t, language }: PageProps) => {
           </div>
         </section>
 
-        <section className="portfolio-section" id="projects" aria-labelledby="projects-title">
+        <section className="portfolio-section" id="technologies" aria-labelledby="technologies-title">
           <div className="portfolio-container">
             <SectionHeading
-              eyebrow={t("portfolio.projects.eyebrow")}
-              title={t("portfolio.projects.title")}
-              description={t("portfolio.projects.description")}
-              id="projects-title"
+              eyebrow={t("portfolio.technologies.eyebrow")}
+              title={t("portfolio.technologies.title")}
+              description={t("portfolio.technologies.description")}
+              id="technologies-title"
             />
-            <div className="project-grid">
-              <article className="project-card">
-                <a className="project-card__image-link" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready" target="_blank" rel="noopener noreferrer">
-                  <img
-                    className="project-card__image"
-                    src="https://raw.githubusercontent.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready/main/src/images/desafio-engenharia-de-dados.jpg"
-                    alt={t("portfolio.projects.batchPipeline.imageAlt")}
-                  />
-                </a>
-                <p className="project-card__meta">{t("portfolio.projects.batchPipeline.meta")}</p>
-                <h3>{t("portfolio.projects.batchPipeline.title")}</h3>
-                <p className="prose">{t("portfolio.projects.batchPipeline.description")}</p>
-                <div className="project-card__flow" aria-label={t("portfolio.projects.batchPipeline.flowLabel")}>
-                  {(t("portfolio.projects.batchPipeline.flow", { returnObjects: true }) as string[]).map((step) => <span key={step}>{step}</span>)}
-                </div>
-                <ul className="project-card__stack">
-                  {(t("portfolio.projects.batchPipeline.stack", { returnObjects: true }) as string[]).map((item) => <li key={item}>{item}</li>)}
-                </ul>
-                <div className="project-card__footer">
-                  <a className="portfolio-button" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready" target="_blank" rel="noopener noreferrer">{t("portfolio.projects.batchPipeline.code")}</a>
-                  <a className="portfolio-button portfolio-button--secondary" href="https://github.com/vagnero/Desafio-Tecnico-Engenheiro-de-Dados-Cloud-Ready#arquitetura-do-projeto" target="_blank" rel="noopener noreferrer">{t("portfolio.projects.batchPipeline.readme")}</a>
-                </div>
-              </article>
+            <div className="technology-grid">
+              {technologyGroups.map((group) => (
+                <article className="content-panel" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul className="technology-list">
+                    {group.items.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                </article>
+              ))}
             </div>
-            <p><Link className="inline-link" to="/projects">{t("portfolio.projects.openProjects")}</Link></p>
           </div>
         </section>
 

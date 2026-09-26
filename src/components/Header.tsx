@@ -59,7 +59,7 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
           <a className="site-header__icon-button" href="https://www.linkedin.com/in/vagner-da-silva-matias-967899263/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin aria-hidden="true" />
           </a>
-          <a className="site-header__icon-button" href="https://github.com/?locale=pt-br" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a className="site-header__icon-button" href="https://github.com/vagnero" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub aria-hidden="true" />
           </a>
           <a className="site-header__icon-button" href="mailto:vagner_matias1@outlook.com" aria-label="Email">

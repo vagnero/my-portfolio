@@ -17,13 +17,19 @@
   },
   "portfolio": {
     "hero": {
-      "eyebrow": "Data Engineer",
+      "eyebrow": "Junior / Mid-level opportunities",
       "role": "Data Engineer",
-      "summary": "I build and analyze data-oriented solutions with a focus on reliability, integrity and availability for the business.",
+      "summary": "Data pipelines, ETL and orchestration. Previously a Junior Data Engineer at LEEGA on the Santander Seguros project; currently an IT Consultant at ECOVIS WFA, working with Python and Airflow.",
       "primaryAction": "View projects",
-      "resumeAction": "Download resume",
+      "resumeAction": "Download resume (DOCX)",
       "linkedin": "LinkedIn",
-      "github": "GitHub"
+      "github": "GitHub",
+      "stackLabel": "Core stack",
+      "profilesLabel": "Professional profiles and contact",
+      "featuredLabel": "Featured project",
+      "featuredTitle": "E-commerce pipeline · Python + Airflow",
+      "featuredSummary": "API → Bronze / Silver / Gold → PostgreSQL. Local Docker MVP with a documented AWS evolution.",
+      "featuredAction": "View case study"
     },
     "technologies": {
       "eyebrow": "Technical stack",
@@ -38,7 +44,7 @@
     "experience": {
       "eyebrow": "Career",
       "title": "Experience with data and systems",
-      "description": "Experience in auditing, analysis, databases and technical support supporting my transition into Data Engineering."
+      "description": "Data engineering at LEEGA, ETL and orchestration at ECOVIS WFA, and data analysis experience in the public sector."
     },
     "projects": {
       "eyebrow": "Technical portfolio",

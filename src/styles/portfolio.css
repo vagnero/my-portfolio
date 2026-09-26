@@ -719,3 +719,89 @@ input:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+/* Keep the recruiting essentials together in the opening section. */
+.hero {
+  padding: 6.5rem 0 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+}
+
+.hero__grid {
+  gap: 2rem;
+}
+
+.hero__role {
+  margin: 0.65rem 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.hero__certification {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.hero__summary {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.hero__stack {
+  margin-top: 1rem;
+}
+
+.hero__stack .content-panel__label {
+  margin-bottom: 0.4rem;
+}
+
+.hero__actions {
+  margin-top: 1.25rem;
+}
+
+.hero__actions .portfolio-button {
+  gap: 0.5rem;
+}
+
+.hero .social-links {
+  margin-top: 0.85rem;
+  column-gap: 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+.hero + .portfolio-main {
+  padding-top: 0;
+}
+
+.hero + .portfolio-main .portfolio-section {
+  padding-block: 2.5rem;
+}
+
+.project-grid--featured {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-grid--featured .project-card__image-link {
+  max-width: 560px;
+}
+
+body.dark .portfolio-button:not(.portfolio-button--secondary) {
+  color: var(--portfolio-canvas);
+}
+
+@media (max-width: 680px) {
+  .hero {
+    padding-top: 5.5rem;
+  }
+
+  .hero__actions .portfolio-button {
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .hero__proof {
+    max-width: none;
+  }
+}
