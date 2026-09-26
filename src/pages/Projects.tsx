@@ -8,8 +8,15 @@ interface PageProps {
   t: TFunction;
 }
 
+interface ProjectSection {
+  label: string;
+  text: string;
+}
+
 const Projects: React.FC<PageProps> = ({ pageName, t }) => {
   useDocumentTitle(pageName, "Vagner da Silva Matias | Projects");
+
+  const caseStudy = t("portfolio.projects.batchPipeline.caseStudy", { returnObjects: true }) as ProjectSection[];
 
   return (
     <div className="page-shell portfolio-container">
@@ -30,6 +37,14 @@ const Projects: React.FC<PageProps> = ({ pageName, t }) => {
           <p className="project-card__meta">{t("portfolio.projects.batchPipeline.meta")}</p>
           <h2>{t("portfolio.projects.batchPipeline.title")}</h2>
           <p className="prose">{t("portfolio.projects.batchPipeline.description")}</p>
+          <dl className="project-case-study">
+            {caseStudy.map((section) => (
+              <div className="project-case-study__section" key={section.label}>
+                <dt>{section.label}</dt>
+                <dd>{section.text}</dd>
+              </div>
+            ))}
+          </dl>
           <div className="project-card__flow" aria-label={t("portfolio.projects.batchPipeline.flowLabel")}>
             {(t("portfolio.projects.batchPipeline.flow", { returnObjects: true }) as string[]).map((step) => <span key={step}>{step}</span>)}
           </div>

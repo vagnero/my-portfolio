@@ -31,8 +31,8 @@
       "description": "Tools and topics that are part of my education and professional journey.",
       "groups": [
         { "title": "Cloud", "items": ["AWS", "Virtual machines", "Databases"] },
-        { "title": "Data", "items": ["Python", "SQL (TODO: add evidence)", "ETL / ELT (TODO: add project)"] },
-        { "title": "Platforms", "items": ["Databricks (TODO: confirm experience)", "Spark / PySpark (TODO: confirm experience)", "Airflow / Control-M (TODO: confirm experience)"] }
+        { "title": "Data", "items": ["Python", "SQL", "ETL / ELT"] },
+        { "title": "Platforms", "items": ["Databricks", "Apache Airflow", "Control-M"] }
       ]
     },
     "experience": {
@@ -52,6 +52,17 @@
         "flowLabel": "Pipeline flow",
         "flow": ["Public API", "Bronze", "Silver", "Gold", "PostgreSQL"],
         "stack": ["Python", "pandas", "Apache Airflow", "Docker", "PostgreSQL", "Parquet"],
+        "caseStudy": [
+          { "label": "Problem", "text": "Demonstrate a complete batch flow for ingesting, transforming and serving e-commerce analytics data from a public API." },
+          { "label": "Context", "text": "Originally developed as a technical challenge and adapted for this portfolio. The MVP runs locally; the cloud architecture described in the repository is a reference evolution, not a verified execution." },
+          { "label": "Architecture", "text": "The API feeds the Bronze layer, data is treated in Silver and aggregated in Gold, and the result is loaded into PostgreSQL. Apache Airflow can orchestrate the stages through the pipeline_ecommerce_medallion DAG." },
+          { "label": "Solution", "text": "Python extraction, raw-data preservation, typing and standardization with Parquet conversion, analytical modeling and final loading for BI consumption." },
+          { "label": "Technologies", "text": "Python, pandas, Apache Airflow, Docker, PostgreSQL and Parquet. The README also documents future options with S3, Kinesis, Glue, Spark, Iceberg and Lambda, without claiming they are implemented in the MVP." },
+          { "label": "My contribution", "text": "I implemented the batch pipeline and adapted the technical challenge into a data-focused portfolio project. I also structured a cloud-ready evolution from the original on-premise processing to an AWS-oriented architecture, keeping the boundary between local execution and production reference explicit." },
+          { "label": "Technical challenges", "text": "The main challenge was designing a scalable evolution for data originally processed on-premise: separating ingestion, treatment and consumption into Bronze, Silver and Gold layers, orchestrating the stages with Airflow and simulating the move to AWS services without presenting the simulation as a real deployment." },
+          { "label": "Result", "text": "A functional end-to-end batch flow with preserved raw data, Parquet transformations, analytical aggregations and Gold-layer loading into PostgreSQL. The repository also documents the cloud-ready evolution and includes visual evidence of the pipeline layers; no volume, runtime or quality metrics were published." },
+          { "label": "GitHub / demonstration", "text": "GitHub contains the code, README, architecture diagram and Bronze, Silver and Gold visual evidence. The video demonstration mentioned in the README is currently unavailable." }
+        ],
         "code": "View code on GitHub",
         "readme": "View architecture in README"
       },
@@ -67,8 +78,25 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "Engineering, data and reliability",
-      "text": "I have a degree in Systems Analysis and Development and experience in systems development, internal auditing, data analysis, Power BI, databases and AWS infrastructure.",
+      "title": "Data Engineering focused on reliable solutions",
+      "text": "I am an AWS-certified Data Engineer with experience in pipelines, ETL, workflow orchestration and data processing across cloud and local environments.",
+      "focusLabel": "Professional positioning",
+      "focusTitle": "I build reliable paths for data",
+      "focusText": "My work covers stages of the data lifecycle, from ingestion and transformation to serving structured data for analysis. I use Python, SQL, databases and orchestration tools to make workflows more organized, reproducible and useful for the business.",
+      "certificationLabel": "Certification",
+      "certificationTitle": "AWS Certified Data Engineer – Associate",
+      "certificationText": "AWS certification in Data Engineering, aligned with my focus on cloud data pipelines, storage, processing and availability.",
+      "certificationAction": "View certificate",
+      "approachLabel": "Areas of focus",
+      "approachTitle": "From pipeline to consumption",
+      "approachText": "I combine engineering fundamentals, automation and business context to deliver data with quality and traceability.",
+      "highlights": [
+        { "title": "Pipelines and ETL", "text": "Experience with ingestion, transformation, standardization and data organization across Bronze, Silver and Gold layers." },
+        { "title": "Cloud and platforms", "text": "Experience with AWS, Azure and Databricks, including services and tools present in the data lifecycle described in my resume." },
+        { "title": "Orchestration and delivery", "text": "Use of Apache Airflow, Control-M, Git, Pull Requests and CI/CD practices to support automated workflows." },
+        { "title": "Data for decisions", "text": "Experience with Python, pandas, SQL, PostgreSQL and Power BI to prepare data and support analysis." }
+      ],
+      "educationLabel": "Academic background",
       "action": "Learn about my journey"
     },
     "contact": {

@@ -31,8 +31,8 @@
       "description": "Ferramentas e temas que fazem parte da minha formação e trajetória profissional.",
       "groups": [
         { "title": "Cloud", "items": ["AWS", "Máquinas virtuais", "Bancos de dados"] },
-        { "title": "Dados", "items": ["Python", "SQL (TODO: adicionar evidência)", "ETL / ELT (TODO: adicionar projeto)"] },
-        { "title": "Plataformas", "items": ["Databricks (TODO: confirmar experiência)", "Spark / PySpark (TODO: confirmar experiência)", "Airflow / Control-M (TODO: confirmar experiência)"] }
+        { "title": "Dados", "items": ["Python", "SQL", "ETL / ELT"] },
+        { "title": "Plataformas", "items": ["Databricks", "Apache Airflow", "Control-M"] }
       ]
     },
     "experience": {
@@ -52,6 +52,17 @@
         "flowLabel": "Fluxo do pipeline",
         "flow": ["API pública", "Bronze", "Silver", "Gold", "PostgreSQL"],
         "stack": ["Python", "pandas", "Apache Airflow", "Docker", "PostgreSQL", "Parquet"],
+        "caseStudy": [
+          { "label": "Problema", "text": "Demonstrar um fluxo batch completo para ingestão, transformação e disponibilização de dados analíticos de e-commerce a partir de uma API pública." },
+          { "label": "Contexto", "text": "Projeto originalmente desenvolvido como teste técnico e adaptado para portfólio. O MVP é executado localmente; a arquitetura cloud descrita no repositório é uma evolução de referência, não uma execução comprovada." },
+          { "label": "Arquitetura", "text": "A API alimenta a camada Bronze, os dados passam por tratamento na Silver e agregação na Gold, e o resultado é carregado no PostgreSQL. O Apache Airflow pode orquestrar as etapas por meio da DAG pipeline_ecommerce_medallion." },
+          { "label": "Solução", "text": "Extração com Python, preservação dos dados brutos, tipagem e padronização com conversão para Parquet, modelagem analítica e carga final para consumo por ferramentas de BI." },
+          { "label": "Tecnologias", "text": "Python, pandas, Apache Airflow, Docker, PostgreSQL e Parquet. O README também documenta possibilidades futuras com S3, Kinesis, Glue, Spark, Iceberg e Lambda, sem afirmar que estejam implementadas no MVP." },
+          { "label": "Minha contribuição", "text": "Implementei o pipeline batch e adaptei o teste técnico para um projeto de portfólio orientado a dados. Também estruturei uma simulação de evolução do processamento on-premise para uma arquitetura cloud-ready na AWS, mantendo claro o limite entre o que é executado localmente e o que é referência de produção." },
+          { "label": "Desafios técnicos", "text": "O principal desafio foi projetar uma evolução escalável para dados originalmente processados on-premise: separar ingestão, tratamento e consumo em camadas Bronze, Silver e Gold, orquestrar as etapas com Airflow e simular a migração para serviços AWS sem apresentar a simulação como uma implantação real." },
+          { "label": "Resultado", "text": "Fluxo batch funcional de ponta a ponta, com dados brutos preservados, transformações em Parquet, agregações analíticas e carga da camada Gold no PostgreSQL. O repositório também documenta a evolução cloud-ready e apresenta evidências visuais das camadas do pipeline; não foram publicados números de volume, tempo ou qualidade." },
+          { "label": "GitHub / demonstração", "text": "O GitHub contém o código, o README, o diagrama de arquitetura e as evidências visuais Bronze, Silver e Gold. A demonstração em vídeo mencionada no README não está acessível no momento." }
+        ],
         "code": "Ver código no GitHub",
         "readme": "Ver arquitetura no README"
       },
@@ -67,8 +78,25 @@
     },
     "about": {
       "eyebrow": "Sobre",
-      "title": "Engenharia, dados e confiabilidade",
-      "text": "Sou profissional com formação em Análise e Desenvolvimento de Sistemas e experiência em desenvolvimento de sistemas, auditoria interna, análise de dados, Power BI, bancos de dados e infraestrutura AWS.",
+      "title": "Engenharia de Dados com foco em soluções confiáveis",
+      "text": "Sou Engenheiro de Dados certificado pela AWS, com experiência em pipelines, ETL, orquestração de workflows e processamento de dados em ambientes cloud e locais.",
+      "focusLabel": "Posicionamento profissional",
+      "focusTitle": "Construo caminhos confiáveis para os dados",
+      "focusText": "Minha atuação cobre etapas do ciclo de dados, desde ingestão e transformação até a disponibilização de dados estruturados para análise. Trabalho com Python, SQL, bancos de dados e ferramentas de orquestração para tornar os fluxos mais organizados, reproduzíveis e úteis para o negócio.",
+      "certificationLabel": "Certificação",
+      "certificationTitle": "AWS Certified Data Engineer – Associate",
+      "certificationText": "Certificação da AWS em Engenharia de Dados, alinhada ao meu foco em pipelines, armazenamento, processamento e disponibilidade de dados na nuvem.",
+      "certificationAction": "Ver certificado",
+      "approachLabel": "Áreas de atuação",
+      "approachTitle": "Dados do pipeline ao consumo",
+      "approachText": "Busco unir fundamentos de engenharia, automação e contexto de negócio para entregar dados com qualidade e rastreabilidade.",
+      "highlights": [
+        { "title": "Pipelines e ETL", "text": "Experiência com ingestão, transformação, padronização e organização de dados em camadas Bronze, Silver e Gold." },
+        { "title": "Cloud e plataformas", "text": "Vivência com AWS, Azure e Databricks, incluindo serviços e ferramentas presentes no ciclo de dados descrito no currículo." },
+        { "title": "Orquestração e entrega", "text": "Uso de Apache Airflow, Control-M, Git, Pull Requests e práticas de CI/CD para apoiar fluxos automatizados." },
+        { "title": "Dados para decisão", "text": "Experiência com Python, pandas, SQL, PostgreSQL e Power BI para preparar dados e apoiar análises." }
+      ],
+      "educationLabel": "Formação acadêmica",
       "action": "Conheça minha trajetória"
     },
     "contact": {

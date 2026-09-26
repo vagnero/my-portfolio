@@ -412,6 +412,53 @@ input:focus-visible {
   padding: 1.25rem;
 }
 
+.about-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-highlight {
+  min-height: 100%;
+}
+
+.about-highlight--primary {
+  border-top: 4px solid var(--portfolio-accent);
+}
+
+.about-highlight h2 {
+  margin: 0.4rem 0 0.75rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  line-height: 1.15;
+}
+
+.about-highlight .portfolio-button {
+  margin-top: 0.5rem;
+}
+
+.about-details {
+  margin-top: 4rem;
+}
+
+.about-details .section-heading {
+  max-width: none;
+}
+
+.about-details .about-highlight-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-education {
+  margin-top: 4rem;
+}
+
+.about-education ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  color: var(--portfolio-muted);
+  line-height: 1.65;
+}
+
 .content-panel h3,
 .experience-item h3,
 .project-card h3,
@@ -471,6 +518,34 @@ input:focus-visible {
   color: var(--portfolio-muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
+}
+
+.project-case-study {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.project-case-study__section {
+  padding-top: 0.85rem;
+  border-top: 2px solid var(--portfolio-line);
+}
+
+.project-case-study dt {
+  margin-bottom: 0.45rem;
+  color: var(--portfolio-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-case-study dd {
+  margin: 0;
+  color: var(--portfolio-muted);
+  line-height: 1.65;
 }
 
 .project-card__flow span {
@@ -561,7 +636,10 @@ input:focus-visible {
   .technology-grid,
   .project-grid,
   .experience-grid,
-  .resume-layout {
+  .resume-layout,
+  .project-case-study,
+  .about-highlight-grid,
+  .about-details .about-highlight-grid {
     grid-template-columns: 1fr;
   }
 
