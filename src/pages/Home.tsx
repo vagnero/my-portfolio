@@ -77,13 +77,16 @@ const Home = ({ pageName, t, language }: PageProps) => {
               <a href={emailUrl}>vagner_matias1@outlook.com</a>
             </nav>
           </div>
-          <aside className="hero__proof" aria-labelledby="featured-project-title">
-            <p className="hero__proof-label">{t("portfolio.hero.featuredLabel")}</p>
-            <h2 id="featured-project-title">{t("portfolio.hero.featuredTitle")}</h2>
-            <p className="prose">{t("portfolio.hero.featuredSummary")}</p>
-            <Link className="portfolio-button portfolio-button--secondary" to="/projects">
-              {t("portfolio.hero.featuredAction")}
-            </Link>
+          <aside className="hero__proof" aria-labelledby="certification-proof-title">
+            <p className="hero__proof-label">{t("portfolio.certification.eyebrow")}</p>
+            <h2 id="certification-proof-title">{t("portfolio.certification.title")}</h2>
+            <a href={certificatePdf} target="_blank" rel="noopener noreferrer">
+              <img src={certificateImage} alt={t("portfolio.certification.title")} />
+            </a>
+            <p className="prose">{t("portfolio.certification.description")}</p>
+            <a className="portfolio-button" href={certificatePdf} target="_blank" rel="noopener noreferrer">
+              {t("portfolio.certification.view")}
+            </a>
           </aside>
         </div>
       </section>

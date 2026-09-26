@@ -365,6 +365,7 @@ input:focus-visible {
 }
 
 .hero__proof {
+  border-top: 4px solid var(--portfolio-accent);
   padding: 1.25rem;
   box-shadow: 0 1.5rem 3rem rgba(23, 32, 42, 0.08);
 }
@@ -393,8 +394,8 @@ input:focus-visible {
 }
 
 .hero__proof img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  max-height: 280px;
+  object-fit: contain;
 }
 
 .hero__proof .portfolio-button {
