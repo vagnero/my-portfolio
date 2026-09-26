@@ -38,11 +38,11 @@ function App() {
   <main>
     <PageWrapper language={language}>
       <Routes>
-        <Route path="/" element={<Home pageName={t("header.home")} darkMode={darkMode} t={t} />} />
-        <Route path="/resume" element={<Resume darkMode={darkMode} pageName={t("header.resume")} t={t} />} />
-        <Route path="/about" element={<About pageName={t("header.about")} />} />
-        <Route path="/projects" element={<Projects pageName={t("header.projects")} />} />
-        <Route path="/contact" element={<Contact pageName={t("header.contact")} />} />
+        <Route path="/" element={<Home pageName={t("header.home")} darkMode={darkMode} t={t} language={language} />} />
+        <Route path="/resume" element={<Resume darkMode={darkMode} pageName={t("header.resume")} t={t} language={language} />} />
+        <Route path="/about" element={<About pageName={t("header.about")} t={t} />} />
+        <Route path="/projects" element={<Projects pageName={t("header.projects")} t={t} />} />
+        <Route path="/contact" element={<Contact pageName={t("header.contact")} t={t} />} />
         <Route path="/college" element={<College pageName={t("header.college")} darkMode={darkMode} t={t} i18n={i18n} />} />
       </Routes>
     </PageWrapper>

@@ -22,7 +22,7 @@ const CollegeCarousel  = ({ images, title, darkMode }: CollegeCarouselProps) => 
       <h2 className="college-title">{title}</h2>
       <div className={`carousel-container ${darkMode ? "bg-body-secondary" : "bg-dark"}`}>
       
-        <button className="carousel-btn prev" onClick={prevSlide}>
+        <button className="carousel-btn prev" onClick={prevSlide} aria-label="Previous academic record">
           &#10094;
         </button>
 
@@ -39,17 +39,20 @@ const CollegeCarousel  = ({ images, title, darkMode }: CollegeCarouselProps) => 
           />
         </a>
 
-        <button className="carousel-btn next" onClick={nextSlide}>
+        <button className="carousel-btn next" onClick={nextSlide} aria-label="Next academic record">
           &#10095;
         </button>
 
         {/* Indicadores dentro do container */}
         <div className="carousel-indicators">
           {images.map((_, idx) => (
-            <span
+            <button
+              type="button"
               key={idx}
               className={`dot ${idx === current ? "active" : ""}`}
               onClick={() => setCurrent(idx)}
+              aria-label={`Show academic record ${idx + 1}`}
+              aria-current={idx === current ? "true" : undefined}
             />
           ))}
         </div>

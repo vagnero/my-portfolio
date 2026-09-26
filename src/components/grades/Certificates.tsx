@@ -8,14 +8,15 @@ interface CertificatesProps {
 }
 
 const Certificates = ({ title, t, darkMode }: CertificatesProps) => {
+  const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
   const certs = [
     {
-      src: "/my-portfolio/certificates/CertificadoConclusaoLinkedin.jpg",
+      src: assetPath("certificates/CertificadoConclusaoLinkedin.jpg"),
       title: t("college.certificates.titleConclusionCertificate"),
       description: t("college.certificates.descriptionConclusionCertificate"),
     },
     {
-      src: "/my-portfolio/certificates/CertificadoMeritoEstudantil.jpg",
+      src: assetPath("certificates/CertificadoMeritoEstudantil.jpg"),
       title: t("college.certificates.titleAcademicMeritCertificate"),
       description: t("college.certificates.descriptionAcademicMeritCertificate"),
     },

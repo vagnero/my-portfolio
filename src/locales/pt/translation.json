@@ -15,6 +15,69 @@
     "welcome": "Bem-vindo ao meu portfólio!",
     "description": "Aqui você pode ver meus projetos e habilidades."
   },
+  "portfolio": {
+    "hero": {
+      "eyebrow": "Engenharia de Dados",
+      "role": "Data Engineer",
+      "summary": "Construo e analiso soluções orientadas a dados, com foco em confiabilidade, integridade e disponibilidade para o negócio.",
+      "primaryAction": "Ver projetos",
+      "resumeAction": "Baixar currículo",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "technologies": {
+      "eyebrow": "Stack técnica",
+      "title": "Tecnologias principais",
+      "description": "Ferramentas e temas que fazem parte da minha formação e trajetória profissional.",
+      "groups": [
+        { "title": "Cloud", "items": ["AWS", "Máquinas virtuais", "Bancos de dados"] },
+        { "title": "Dados", "items": ["Python", "SQL (TODO: adicionar evidência)", "ETL / ELT (TODO: adicionar projeto)"] },
+        { "title": "Plataformas", "items": ["Databricks (TODO: confirmar experiência)", "Spark / PySpark (TODO: confirmar experiência)", "Airflow / Control-M (TODO: confirmar experiência)"] }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Trajetória",
+      "title": "Experiência com dados e sistemas",
+      "description": "Experiências em auditoria, análise, bancos de dados e suporte técnico que sustentam minha transição para Engenharia de Dados."
+    },
+    "projects": {
+      "eyebrow": "Portfólio técnico",
+      "title": "Projetos em destaque",
+      "description": "Estudos de caso com arquitetura, código e resultados verificáveis.",
+      "batchPipeline": {
+        "meta": "PIPELINE DE DADOS · BATCH",
+        "title": "Data Lakehouse Pipeline: Engenharia de Dados Cloud-Ready",
+        "description": "Pipeline analítico de e-commerce que extrai dados de uma API pública, preserva o bruto, trata e padroniza os dados e disponibiliza agregações para análise. O MVP roda localmente com Docker, Airflow e PostgreSQL e foi estruturado para evoluir para serviços cloud gerenciados.",
+        "imageAlt": "Diagrama da arquitetura do pipeline de dados em camadas Bronze, Silver e Gold",
+        "flowLabel": "Fluxo do pipeline",
+        "flow": ["API pública", "Bronze", "Silver", "Gold", "PostgreSQL"],
+        "stack": ["Python", "pandas", "Apache Airflow", "Docker", "PostgreSQL", "Parquet"],
+        "code": "Ver código no GitHub",
+        "readme": "Ver arquitetura no README"
+      },
+      "openProjects": "Ver todos os projetos"
+    },
+    "certification": {
+      "eyebrow": "Certificação",
+      "title": "AWS Certified Data Engineer – Associate",
+      "issuer": "Amazon Web Services",
+      "description": "Certificação profissional em Engenharia de Dados na AWS.",
+      "view": "Ver certificado",
+      "download": "Baixar PDF"
+    },
+    "about": {
+      "eyebrow": "Sobre",
+      "title": "Engenharia, dados e confiabilidade",
+      "text": "Sou profissional com formação em Análise e Desenvolvimento de Sistemas e experiência em desenvolvimento de sistemas, auditoria interna, análise de dados, Power BI, bancos de dados e infraestrutura AWS.",
+      "action": "Conheça minha trajetória"
+    },
+    "contact": {
+      "eyebrow": "Contato",
+      "title": "Vamos conversar sobre dados?",
+      "text": "Estou aberto a oportunidades e conversas técnicas sobre Engenharia de Dados.",
+      "email": "Enviar email"
+    }
+  },
 
  "college": {
   "certificates": {
@@ -49,37 +112,54 @@
   },
  "resume": {
   "title": "Currículo",
-  "summary": "Profissional com foco em Engenharia de Dados, atuando como Trainee. Possuo experiência em desenvolvimento de sistemas e auditoria interna, com habilidades em Python, Power BI, Java e Excel. Minha atuação é centrada na construção e manipulação de dados, garantindo sua integridade e disponibilidade para o negócio.",
+  "summary": "Engenheiro de Dados certificado pela AWS, com dois anos de experiência em pipelines de dados, processos de ETL e orquestração de workflows em nuvem. Atuo no ciclo de dados de ponta a ponta, com foco em qualidade, integridade, performance e disponibilidade.",
   "experience": "Experiência Profissional",
   "experience_list": [
     {
-      "role": "Consultor GRC",
-      "company": "Grant Thornton Brasil",
-      "period": "Abr 2025 – Ago 2025",
+      "role": "Consultor de TI",
+      "company": "ECOVIS WFA",
+      "period": "Abr 2026 – Atual",
       "description": [
-        "Auditorias internas e externas com foco em SOX e COSO",
-        "Análise de dados para compliance e riscos",
-        "Dashboards com Power BI e manipulação de dados no Excel",
-        "Colaboração em equipes multidisciplinares"
+        "Implantação e configuração do Apache Airflow para orquestração de workflows",
+        "Construção de rotinas diárias de ingestão para dados de marketing e AdOps",
+        "Desenvolvimento de scripts em Python para processos de ETL e automação de relatórios"
       ]
     },
     {
-      "role": "Auxiliar em Banco de Dados e Suporte Técnico",
+      "role": "Engenheiro de Dados Júnior",
+      "company": "LEEGA",
+      "period": "Jul 2025 – Jan 2026",
+      "description": [
+        "Ingestão e processamento de dados em larga escala no projeto Santander Seguros",
+        "Construção de pipelines com YAML, Git, Pull Requests e práticas de CI/CD",
+        "Transformações nas camadas Silver e Gold da arquitetura Medallion no Databricks",
+        "Orquestração de workflows com Control-M e atendimento de incidentes via Jira e ServiceNow"
+      ]
+    },
+    {
+      "role": "Desenvolvedor Full-Stack e Analista de Dados",
       "company": "Prefeitura de Ferraz de Vasconcelos",
       "period": "Jul 2024 – Mar 2025",
       "description": [
-        "Análise de dados do IEGM com Python e Power BI",
-        "Projetos web/mobile em equipe utilizando o Github",
-        "Uso de AWS para servidores (VM) e bancos de dados"
+        "Extração, processamento e análise de dados municipais com Python, pandas e PostgreSQL",
+        "Criação de dashboards no Power BI para apoio à tomada de decisão",
+        "Desenvolvimento de sistema de agendamento de ambulâncias com Java 17, Spring Boot, React e PostgreSQL",
+        "Implantação de servidores EC2 e bancos relacionais RDS na AWS"
       ]
     }
   ],
   "education": "Formação",
   "education_list": [
-    "Tecnólogo em Análise e Desenvolvimento de Sistemas — FATEC (Ago 2022 – Jul 2025)",
-    "Cursos complementares: AWS, Docker, React Native"
+    "Tecnólogo em Análise e Desenvolvimento de Sistemas — FATEC (Ago 2022 – Jul 2025)"
   ],
+  "certifications": "Certificações",
+  "certification_list": ["AWS Certified Data Engineer – Associate (Set 2026 – Set 2029)"],
+  "skills": "Competências",
+  "skills_list": ["AWS (S3, Glue, Athena, Redshift, DynamoDB)", "Azure, Databricks, Apache Airflow, Control-M", "Python, SQL, pandas, PostgreSQL", "Git, GitHub, CI/CD, Jira, ServiceNow, Power BI"],
+  "languages": "Idiomas",
+  "language_list": ["Português: nativo", "Inglês: avançado", "Espanhol: básico"],
   "download": "Baixar Currículo",
+  "viewOnline": "Ver no site",
   "downloadLink": "/my-portfolio/cv/Curriculo_Vagner_Matias_Portuguese.pdf"
 },
 

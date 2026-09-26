@@ -38,7 +38,7 @@ body {
   color: var(--text-color);
 }
 
-header, footer {
+.site-header, .portfolio-footer {
   background-color: var(--header-footer-bg);
   color: var(--header-footer-text);
 }

@@ -15,6 +15,69 @@
     "welcome": "Welcome to my portfolio!",
     "description": "Here you can see my projects and skills."
   },
+  "portfolio": {
+    "hero": {
+      "eyebrow": "Data Engineering",
+      "role": "Data Engineer",
+      "summary": "I build and analyze data-oriented solutions with a focus on reliability, integrity and availability for the business.",
+      "primaryAction": "View projects",
+      "resumeAction": "Download resume",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "technologies": {
+      "eyebrow": "Technical stack",
+      "title": "Core technologies",
+      "description": "Tools and topics that are part of my education and professional journey.",
+      "groups": [
+        { "title": "Cloud", "items": ["AWS", "Virtual machines", "Databases"] },
+        { "title": "Data", "items": ["Python", "SQL (TODO: add evidence)", "ETL / ELT (TODO: add project)"] },
+        { "title": "Platforms", "items": ["Databricks (TODO: confirm experience)", "Spark / PySpark (TODO: confirm experience)", "Airflow / Control-M (TODO: confirm experience)"] }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Career",
+      "title": "Experience with data and systems",
+      "description": "Experience in auditing, analysis, databases and technical support supporting my transition into Data Engineering."
+    },
+    "projects": {
+      "eyebrow": "Technical portfolio",
+      "title": "Featured projects",
+      "description": "Case studies with architecture, code and verifiable results.",
+      "batchPipeline": {
+        "meta": "DATA PIPELINE · BATCH",
+        "title": "Data Lakehouse Pipeline: Cloud-Ready Data Engineering",
+        "description": "An e-commerce analytics pipeline that extracts data from a public API, preserves the raw layer, cleans and standardizes the data, and publishes analytical aggregations. The MVP runs locally with Docker, Airflow and PostgreSQL and is designed to evolve toward managed cloud services.",
+        "imageAlt": "Data pipeline architecture diagram with Bronze, Silver and Gold layers",
+        "flowLabel": "Pipeline flow",
+        "flow": ["Public API", "Bronze", "Silver", "Gold", "PostgreSQL"],
+        "stack": ["Python", "pandas", "Apache Airflow", "Docker", "PostgreSQL", "Parquet"],
+        "code": "View code on GitHub",
+        "readme": "View architecture in README"
+      },
+      "openProjects": "View all projects"
+    },
+    "certification": {
+      "eyebrow": "Certification",
+      "title": "AWS Certified Data Engineer – Associate",
+      "issuer": "Amazon Web Services",
+      "description": "Professional certification in Data Engineering on AWS.",
+      "view": "View certificate",
+      "download": "Download PDF"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Engineering, data and reliability",
+      "text": "I have a degree in Systems Analysis and Development and experience in systems development, internal auditing, data analysis, Power BI, databases and AWS infrastructure.",
+      "action": "Learn about my journey"
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let’s talk about data",
+      "text": "I am open to opportunities and technical conversations about Data Engineering.",
+      "email": "Send email"
+    }
+  },
   "college": {
     "certificates": {
     "title": "Certificates",
@@ -53,38 +116,55 @@
   },
  "resume": {
   "title": "Resume",
-  "summary": "Data Engineer Trainee with experience in system development and internal auditing. Skilled in Python, Power BI, Java, and Excel, with a strong focus on data construction, manipulation, integrity, and availability to support business needs.",
+  "summary": "AWS-certified Data Engineer with two years of experience building data pipelines, ETL processes and cloud workflow orchestration. Experienced across the end-to-end data lifecycle, with a focus on data quality, integrity, performance and availability.",
   "experience": "Professional Experience",
   "experience_list": [
     {
-      "role": "GRC Consultant",
-      "company": "Grant Thornton Brazil",
-      "period": "Apr 2025 – Aug 2025",
+      "role": "IT Consultant",
+      "company": "ECOVIS WFA",
+      "period": "Apr 2026 – Present",
       "description": [
-        "Internal and external audits focused on SOX and COSO",
-        "Data analysis for compliance and risk assessment",
-        "Power BI dashboards and data manipulation in Excel",
-        "Collaboration in multidisciplinary teams"
+        "Implemented and configured Apache Airflow to orchestrate data workflows",
+        "Built daily ingestion routines for marketing and AdOps data",
+        "Developed Python scripts for ETL processes and automated structured reports"
       ]
     },
     {
-      "role": "Database Assistant and Technical Support",
+      "role": "Junior Data Engineer",
+      "company": "LEEGA",
+      "period": "Jul 2025 – Jan 2026",
+      "description": [
+        "Supported large-scale data ingestion and processing for Santander Insurance",
+        "Built ingestion pipelines with YAML, Git, Pull Requests and CI/CD practices",
+        "Developed Silver and Gold layer transformations in Databricks Medallion Architecture",
+        "Supported Control-M workflow orchestration and incident handling through Jira and ServiceNow"
+      ]
+    },
+    {
+      "role": "Full-Stack Developer and Data Analyst",
       "company": "City Hall of Ferraz de Vasconcelos",
       "period": "Jul 2024 – Mar 2025",
       "description": [
-        "Data analysis of IEGM with Python and Power BI",
-        "Team projects (web/mobile) using GitHub",
-        "AWS virtual machines (VMs) and database management"
+        "Extracted, processed and analyzed municipal data with Python, pandas and PostgreSQL",
+        "Created Power BI dashboards to support administrative decision-making",
+        "Developed an ambulance scheduling system with Java 17, Spring Boot, React and PostgreSQL",
+        "Deployed EC2 servers and relational RDS databases on AWS"
       ]
     }
   ],
   "education": "Education",
   "education_list": [
-    "Technologist in Systems Analysis and Development — FATEC (Aug 2022 – Jul 2025)",
-    "Additional courses: AWS, Docker, React Native"
+    "Technology Degree in Systems Analysis and Development — FATEC (Aug 2022 – Jul 2025)"
   ],
+  "certifications": "Certifications",
+  "certification_list": ["AWS Certified Data Engineer – Associate (Sep 2026 – Sep 2029)"],
+  "skills": "Skills",
+  "skills_list": ["AWS (S3, Glue, Athena, Redshift, DynamoDB)", "Azure, Databricks, Apache Airflow, Control-M", "Python, SQL, pandas, PostgreSQL", "Git, GitHub, CI/CD, Jira, ServiceNow, Power BI"],
+  "languages": "Languages",
+  "language_list": ["Portuguese: native", "English: advanced", "Spanish: basic"],
   "download": "Download Resume",
-  "downloadLink": "/my-portfolio/cv/Curriculo_Vagner_Matias_Portuguese.pdf"
+  "viewOnline": "View online",
+  "downloadLink": "/my-portfolio/cv/Curriculo_Vagner_Matias_English.docx"
 
 }
 ,

@@ -14,11 +14,9 @@ const themeSlice = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.darkMode = !state.darkMode;
-      document.body.classList.toggle("dark", state.darkMode);
     },
     setTheme: (state, action) => {
       state.darkMode = action.payload;
-      document.body.classList.toggle("dark", state.darkMode);
     },
   },
 });

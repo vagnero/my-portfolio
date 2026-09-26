@@ -29,17 +29,14 @@ const College = ({ pageName, darkMode, t }: PageProps) => {
 
   // Carrega o JSON do public
   useEffect(() => {
-    // fetch("/my-portfolio/data/grades.json")
-    //   .then((res) => res.json())
-    //   .then((data) => setGradesData(data));
     const data = t("grades", { returnObjects: true }) as Grade[];
     setGradesData(data);
-  }, []);
+  }, [t]);
 
   const images = [
-    "/my-portfolio/grades/Historic-1.jpg",
-    "/my-portfolio/grades/Historic-2.jpg",
-    "/my-portfolio/grades/Historic-3.jpg",
+    `${import.meta.env.BASE_URL}grades/Historic-1.jpg`,
+    `${import.meta.env.BASE_URL}grades/Historic-2.jpg`,
+    `${import.meta.env.BASE_URL}grades/Historic-3.jpg`,
   ];
 
   return (
