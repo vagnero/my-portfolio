@@ -18,7 +18,7 @@ const Contact: React.FC<PageProps> = ({ pageName, t }) => {
       </header>
       <section className="content-panel contact-list" aria-label={t("portfolio.contact.title")}>
         <a className="portfolio-button" href="mailto:vagner_matias1@outlook.com">{t("portfolio.contact.email")}</a>
-        <a className="portfolio-button portfolio-button--secondary" href="https://www.linkedin.com/in/vagner-da-silva-matias-967899263/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a className="portfolio-button portfolio-button--secondary" href="https://www.linkedin.com/in/vagner-matias-967899263/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a className="portfolio-button portfolio-button--secondary" href="https://github.com/vagnero" target="_blank" rel="noopener noreferrer">GitHub</a>
       </section>
     </div>

@@ -31,7 +31,7 @@ const Home = ({ pageName, t, language }: PageProps) => {
 
   const technologyGroups = t("portfolio.technologies.groups", { returnObjects: true }) as TechnologyGroup[];
   const experienceList = t("resume.experience_list", { returnObjects: true }) as ExperienceItem[];
-  const linkedinUrl = "https://www.linkedin.com/in/vagner-da-silva-matias-967899263/";
+  const linkedinUrl = "https://www.linkedin.com/in/vagner-matias-967899263/";
   const githubUrl = "https://github.com/vagnero";
   const emailUrl = "mailto:vagner_matias1@outlook.com";
   const certificatePdf = assetPath("certificates/AWS Certified Data Engineer - Associate certificate.pdf");

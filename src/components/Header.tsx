@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSun, FaMoon, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaSun, FaMoon, FaLinkedin, FaGithub, FaEnvelope, FaBars, FaTimes, FaLanguage } from "react-icons/fa";
 import type { i18n, TFunction } from "i18next";
 
 interface HeaderProps {
@@ -14,6 +14,9 @@ interface HeaderProps {
 const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isEnglish = i18n.language.startsWith("en");
+  const themeLabel = isEnglish ? (darkMode ? "Use light theme" : "Use dark theme") : (darkMode ? "Ativar tema claro" : "Ativar tema escuro");
+  const languageLabel = isEnglish ? "Mudar para português" : "Switch to English";
   const toggleMenu = () => setIsOpen((open) => !open);
   const closeMenu = () => setIsOpen(false);
 
@@ -29,13 +32,13 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
           className="site-header__menu-button"
           aria-expanded={isOpen}
           aria-controls="site-navigation"
-          aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          aria-label={isEnglish ? (isOpen ? "Close navigation" : "Open navigation") : (isOpen ? "Fechar menu" : "Abrir menu")}
           onClick={toggleMenu}
         >
-          <span aria-hidden="true">{isOpen ? "×" : "☰"}</span>
+          {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </button>
 
-        <nav id="site-navigation" className={`site-header__navigation ${isOpen ? "is-open" : ""}`} aria-label="Main navigation">
+        <nav id="site-navigation" className={`site-header__navigation ${isOpen ? "is-open" : ""}`} aria-label={isEnglish ? "Main navigation" : "Navegação principal"}>
           <Link to="/" onClick={closeMenu}>{t("header.home")}</Link>
           <Link to="/projects" onClick={closeMenu}>{t("header.projects")}</Link>
           <Link to="/resume" onClick={closeMenu}>{t("header.resume")}</Link>
@@ -45,21 +48,21 @@ const Header = ({ toggleTheme, darkMode, t, i18n, toggleLanguage }: HeaderProps)
         </nav>
 
         <div className="site-header__actions">
-          <button type="button" className="site-header__text-button" onClick={toggleLanguage}>
-            {i18n.language === "en" ? "PT" : "EN"}
+          <button type="button" className="site-header__text-button" onClick={toggleLanguage} aria-label={languageLabel} title={languageLabel}>
+            <FaLanguage aria-hidden="true" /><span>{isEnglish ? "PT" : "EN"}</span>
           </button>
           <button
             type="button"
             className="site-header__icon-button"
             onClick={toggleTheme}
-            aria-label={darkMode ? "Use light theme" : "Use dark theme"}
+            aria-label={themeLabel} title={themeLabel}
           >
-            {darkMode ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+            {darkMode ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
           </button>
-          <a className="site-header__icon-button" href="https://www.linkedin.com/in/vagner-da-silva-matias-967899263/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a className="site-header__icon-button" href="https://www.linkedin.com/in/vagner-matias-967899263/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
             <FaLinkedin aria-hidden="true" />
           </a>
-          <a className="site-header__icon-button" href="https://github.com/vagnero" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a className="site-header__icon-button" href="https://github.com/vagnero" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
             <FaGithub aria-hidden="true" />
           </a>
           <a className="site-header__icon-button" href="mailto:vagner_matias1@outlook.com" aria-label="Email">
