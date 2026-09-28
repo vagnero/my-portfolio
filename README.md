@@ -1,69 +1,29 @@
-# React + TypeScript + Vite
+# Portfólio de Vagner Matias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação React, TypeScript e Vite.
 
-Currently, two official plugins are available:
+## Desenvolvimento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Use Node.js 22. Execute `npm ci` e `npm run dev`.
+Validação: `npm run build` e `npm run lint`.
 
-## Expanding the ESLint configuration
+## Publicação automática
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O workflow `.github/workflows/deploy.yml` compila e publica a cada push na
+branch `main`. Também pode ser iniciado na aba Actions, com Run workflow.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Na primeira configuração, acesse **Settings → Pages → Build and deployment
+→ Source** e selecione **GitHub Actions**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+git add .
+git commit -m "Atualiza portfolio"
+git push origin main
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Um commit apenas local não inicia a publicação. Acompanhe o resultado na aba
+Actions. O site será atualizado após a conclusão do deploy:
+https://vagnero.github.io/my-portfolio/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O Vite usa `/my-portfolio/` e a navegação usa HashRouter para funcionar no
+GitHub Pages. Não é necessário executar `npm run deploy` no fluxo automático.
